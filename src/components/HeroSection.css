@@ -1,0 +1,295 @@
+/* HeroSection background image: change in HeroSection.jsx import */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hero-slider-wrapper {
+  display: flex;
+  width: 400%; /* 100% per slide */
+  height: 100vh;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.hero-slide {
+  width: 25%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+}
+
+.hero__overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__content {
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem 2rem;
+  border-radius: 24px;
+  background: rgba(0,0,0,0.18);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero__headline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.hero__tagline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.35rem;
+  margin-bottom: 2.2rem;
+  color: #fff7f0;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.hero__cta {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 8px rgba(255,102,0,0.10);
+  cursor: pointer;
+  margin: 0 0.2rem;
+  outline: none;
+}
+.hero__cta--primary {
+  background: #e74c3c;
+  color: #fff;
+}
+.hero__cta--primary:hover,
+.hero__cta--primary:focus {
+  background: #ff6600;
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(255,102,0,0.18);
+}
+.hero__cta--secondary {
+  background: #fff;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+}
+.hero__cta--secondary:hover,
+.hero__cta--secondary:focus {
+  background: #ff6600;
+  color: #fff;
+  border-color: #ff6600;
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(255,102,0,0.18);
+}
+
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.hero__arrow:hover {
+  background: #ff6600;
+}
+.hero__arrow--left {
+  left: 2rem;
+}
+.hero__arrow--right {
+  right: 2rem;
+}
+
+.hero__dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  z-index: 10;
+}
+.hero__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+.hero__dot:hover {
+  background: #fff;
+}
+.hero__dot--active {
+  background: #ff6600;
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .hero__headline {
+    font-size: 2.1rem;
+  }
+  .hero__content {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .hero__cta {
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__headline {
+    font-size: 1.3rem;
+  }
+  .hero__tagline {
+    font-size: 1rem;
+  }
+  .hero__content {
+    padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+  }
+  .hero__cta {
+    font-size: 0.97rem;
+    padding: 0.6rem 0.9rem;
+  }
+}
+
+.hero-initial-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 10;
+  transform: translateX(100%);
+  transition: background 0.6s ease, transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.hero-initial-overlay.animate {
+  animation: initialOverlaySlideIn 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes initialOverlaySlideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.hero-animated-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(0,0,0,0.5);
+  transform: translateX(0%);
+  opacity: 1;
+  transition: background 0.6s ease, transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+}
+
+.hero-animated-overlay.animate {
+  animation: slidingOverlayHorizontal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes slidingOverlayHorizontal {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+    background: rgba(0,0,0,0.92);
+  }
+  80% {
+    opacity: 1;
+    background: rgba(0,0,0,0.5);
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+    background: rgba(0,0,0,0.1);
+  }
+}
+
+.hero-slide {
+  position: relative;
+}
+
+.hero__text-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroTextFadeIn 1.1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes heroTextFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-light-cover {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.55);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+  animation: heroLightCoverFade 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@keyframes heroLightCoverFade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+} 

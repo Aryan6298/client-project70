@@ -1,0 +1,197 @@
+.programs-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.programs-main h1 {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.programs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.programs-item {
+  background: #fff7f0;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.programs-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(255,102,0,0.13);
+}
+
+.programs-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #ff6600;
+}
+
+.programs-item h2 {
+  color: #ff6600;
+  margin-bottom: 0.5rem;
+}
+
+.programs-item p {
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+}
+
+/* What We Do Page Split Layout */
+.whatwedo-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem 1rem;
+  margin-top: 50px;
+}
+
+.whatwedo-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #1D2BAA;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.whatwedo-intro {
+  font-size: 1.25rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatwedo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.whatwedo-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem;
+  min-height: 340px;
+}
+
+.whatwedo-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.whatwedo-img-wrap {
+  flex: 1 1 340px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 260px;
+  gap: 1.2rem;
+}
+
+.whatwedo-img {
+  width: 100%;
+  max-width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+}
+
+.whatwedo-content {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.whatwedo-program-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1D2BAA;
+  margin-bottom: 1rem;
+}
+
+.whatwedo-program-desc {
+  font-size: 1.13rem;
+  color: #333;
+  margin-bottom: 0.7rem;
+  line-height: 1.7;
+}
+
+.whatwedo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 0.7rem 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  align-items: center;
+  min-width: 70px;
+  max-width: 80px;
+}
+
+.whatwedo-gallery-img {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.18s;
+  background: #fff;
+}
+
+.whatwedo-gallery-img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(29,44,170,0.13);
+}
+
+@media (max-width: 900px) {
+  .whatwedo-section, .whatwedo-section.reverse {
+    flex-direction: column !important;
+    padding: 1.5rem 0.5rem;
+    gap: 1.5rem;
+  }
+  .whatwedo-img-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .whatwedo-img {
+    height: 160px;
+    max-width: 100%;
+  }
+  .whatwedo-gallery {
+    flex-direction: row;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0.5rem 0.2rem;
+    margin-top: 0.5rem;
+    gap: 0.4rem;
+  }
+  .whatwedo-gallery-img {
+    width: 48px;
+    height: 36px;
+  }
+} 

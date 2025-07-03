@@ -1,0 +1,137 @@
+.program-highlight-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -248px;
+  margin-bottom: 4rem;
+  padding: 0;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.program-highlight-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  overflow: visible;
+}
+
+.program-card {
+  background: #e5232b !important;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  overflow: hidden;
+  align-items: stretch;
+  opacity: 0 !important;
+  transform: translateY(60px) !important;
+  transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1), box-shadow 0.2s;
+}
+
+.program-highlight-container.visible .program-card {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.program-highlight-container.visible .program-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.program-highlight-container.visible .program-card:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.program-highlight-container.visible .program-card:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+/* Remove transition-delay when not visible for instant hide */
+.program-highlight-container:not(.visible) .program-card {
+  transition-delay: 0s !important;
+}
+
+.program-card-image-rect {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  display: block;
+}
+
+.program-card-content-rect {
+  background: transparent !important;
+  color: #fff !important;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  z-index: 1;
+}
+
+.program-card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #fff !important;
+}
+
+.program-card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+  color: #fff !important;
+}
+
+.program-card-button {
+  background-color: #fff !important;
+  color: #e5232b !important;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: none;
+}
+
+.program-card-button:hover {
+  background-color: #f09819 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1000px) {
+  .program-card,
+  .program-highlight-container.visible .program-card,
+  .program-highlight-container:not(.visible) .program-card {
+    transition: none !important;
+    transition-delay: 0s !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .program-highlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .program-card {
+    min-width: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+

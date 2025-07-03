@@ -1,0 +1,155 @@
+.our-team-page {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 50px;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.team-intro {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.team-card__image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.team-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.team-card:hover .team-card__image {
+  transform: scale(1.05);
+}
+
+.team-card__content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.team-card__name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.team-card__designation {
+  font-size: 1rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.team-card__bio {
+  font-size: 0.95rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* CTA Sections from Volunteer.css */
+.cta-section-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+}
+
+@media (min-width: 992px) {
+  .cta-section-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cta-section {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cta-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+  transform: translateY(-2px);
+} 

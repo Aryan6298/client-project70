@@ -1,0 +1,153 @@
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import studyMallImg from '../assets/images/gallery06.jpg';
+import studyFinImg from '../assets/images/sapling.jpg';
+import digiLibraryImg from '../assets/images/gallery12.jpg';
+import gallery01 from '../assets/images/gallery01.jpg';
+import gallery02 from '../assets/images/gallery02.jpg';
+import gallery03 from '../assets/images/gallery03.jpg';
+import gallery04 from '../assets/images/gallery04.jpg';
+import gallery05 from '../assets/images/gallery05.jpg';
+import gallery07 from '../assets/images/gallery07.jpg';
+import gallery09 from '../assets/images/gallery09.jpg';
+import gallery10 from '../assets/images/gallery10.jpg';
+import gallery11 from '../assets/images/gallery11.jpg';
+import gallery13 from '../assets/images/gallery13.jpg';
+import gallery14 from '../assets/images/gallery14.jpg';
+import gallery15 from '../assets/images/gallery15.jpg';
+import gallery16 from '../assets/images/gallery16.jpg';
+import './Programs.css';
+
+const programs = [
+  {
+    title: 'Clean-Up Drives',
+    image: studyMallImg,
+    gallery: [gallery01, gallery02, gallery03, gallery04],
+    text: [
+      'Organizing community clean-up events to remove waste and beautify our surroundings.',
+      'Our volunteers work together to clean streets, parks, and public spaces, fostering a sense of community pride.',
+      'We believe that a clean environment is the foundation for a healthy and vibrant society. Join us in making a visible difference!'
+    ]
+  },
+  {
+    title: 'Tree Plantation',
+    image: studyFinImg,
+    gallery: [gallery05, gallery07, gallery09, gallery10],
+    text: [
+      'Planting trees to restore green cover and combat climate change.',
+      'Each sapling we plant is a step toward a greener, more sustainable future for generations to come.',
+      'Our plantation drives engage local communities, schools, and organizations to maximize impact and awareness.'
+    ]
+  },
+  {
+    title: 'Waste Management',
+    image: digiLibraryImg,
+    gallery: [gallery11, gallery13, gallery14, gallery15, gallery16],
+    text: [
+      'Promoting recycling, waste segregation, and responsible disposal practices.',
+      'We conduct workshops and awareness campaigns to educate people about reducing, reusing, and recycling waste.',
+      'Together, we can minimize landfill use and protect our planet from pollution.'
+    ]
+  }
+];
+
+const Programs = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100); // slight delay for route transition
+      }
+    }
+  }, [location]);
+
+  return (
+    <motion.div className="whatwedo-main"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.h1 className="whatwedo-title"
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >What We Do</motion.h1>
+      <motion.p className="whatwedo-intro"
+        initial={{ y: 40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        At Amay Foundation, we are dedicated to making a positive impact on the environment and our communities. Our core initiatives are designed to create lasting change and inspire others to join our mission.
+      </motion.p>
+      <div className="whatwedo-list">
+        {programs.map((prog, idx) => {
+          // Alternate animation directions for sections
+          let initialAnim = {};
+          if (idx % 2 === 0) initialAnim = { x: -60, opacity: 0 }; // fade right
+          else initialAnim = { x: 60, opacity: 0 }; // fade left
+          return (
+            <motion.div
+              className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
+              key={idx}
+              id={
+                prog.title === 'Clean-Up Drives' ? 'cleanup'
+                : prog.title === 'Tree Plantation' ? 'treeplantation'
+                : prog.title === 'Waste Management' ? 'wastemanagement'
+                : undefined
+              }
+              initial={initialAnim}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div className="whatwedo-img-wrap"
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <img src={prog.image} alt={prog.title} className="whatwedo-img" loading="lazy" />
+                <div className="whatwedo-gallery">
+                  {prog.gallery.map((img, i) => (
+                    <Link to="/gallery" key={i}>
+                      <motion.img
+                        src={img}
+                        alt={prog.title + ' gallery ' + (i+1)}
+                        className="whatwedo-gallery-img"
+                        loading="lazy"
+                        initial={{ y: 30, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.7 }}
+                        transition={{ duration: 0.4, delay: 0.05 * i }}
+                        whileHover={{ scale: 1.07, boxShadow: '0 4px 16px rgba(29,44,170,0.13)' }}
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+              <motion.div className="whatwedo-content"
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <h2 className="whatwedo-program-title">{prog.title}</h2>
+                {prog.text.map((line, i) => (
+                  <p className="whatwedo-program-desc" key={i}>{line}</p>
+                ))}
+              </motion.div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </motion.div>
+  );
+};
+
+export default Programs; 
