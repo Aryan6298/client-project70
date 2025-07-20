@@ -52,8 +52,8 @@ const Contact = () => {
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
             <div>
               <h3 className="contact-detail-title">Mail ID</h3>
-              <a href="mailto:servicesgeocon@gmail.com" className="contact-detail-link">
-                servicesgeocon@gmail.com
+              <a href="mailto:amayfoundation2023@gmail.com" className="contact-detail-link">
+                amayfoundation2023@gmail.com
               </a>
             </div>
           </div>
@@ -61,9 +61,9 @@ const Contact = () => {
             <FontAwesomeIcon icon={faPhone} className="contact-icon" />
             <div>
               <h3 className="contact-detail-title">Phone</h3>
-              <a href="tel:+9198277888586" className="contact-detail-link">+91 9827788586</a>
+              <a href="tel:+918889583332" className="contact-detail-link">+91 88895-83332</a>
               <br />
-              <a href="tel:+919039363465" className="contact-detail-link">+91 9039363465</a>
+              <a href="tel:+918982949153" className="contact-detail-link">+91 8982949153</a>
             </div>
           </div>
         </motion.div>

@@ -1,37 +1,55 @@
 import React from 'react';
-import testimonialImg from '../assets/images/service01.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Function to generate initials from name
+const getInitials = (name) => {
+  return name
+    .split(' ')
+    .map(word => word.charAt(0))
+    .join('')
+    .toUpperCase()
+    .slice(0, 2); // Take only first 2 initials
+};
 
 const testimonials = [
   {
     quote: 'Amay Foundation organized a clean-up drive that transformed our neighborhood park. We are so grateful!',
-    name: 'Local Resident',
-    image: testimonialImg
+    name: 'Ajay Kumar',
+    initials: 'AK'
   },
   {
     quote: 'The tree plantation event was inspiring. Our community feels greener and more hopeful.',
-    name: 'Community Volunteer',
-    image: testimonialImg
+    name: 'Kavita Mehta',
+    initials: 'KM'
   },
   {
     quote: 'Thanks to Amay Foundation, we learned how to manage waste better and keep our area clean.',
-    name: 'Youth Group Leader',
-    image: testimonialImg
+    name: 'Rahul Sharma',
+    initials: 'RS'
   }
 ];
 
 const BootstrapTestimonialSection = () => (
   <section className="container py-4 d-flex flex-column align-items-center justify-content-center">
     <style>{`
-      .testimonial-img {
+      .testimonial-initials {
         width: 80px;
         height: 80px;
-        object-fit: cover;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #ff6600, #ea321d);
+        box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
       }
       @media (max-width: 767.98px) {
-        .testimonial-img {
+        .testimonial-initials {
           width: 60px;
           height: 60px;
+          font-size: 18px;
         }
       }
     `}</style>
@@ -42,7 +60,9 @@ const BootstrapTestimonialSection = () => (
           {testimonials.map((t, i) => (
             <div className={`carousel-item${i === 0 ? ' active' : ''}`} key={i}>
               <div className="d-flex flex-column align-items-center">
-                <img src={t.image} alt={t.name} className="rounded-circle mb-3 testimonial-img" />
+                <div className="testimonial-initials mb-3">
+                  {t.initials}
+                </div>
                 <blockquote className="blockquote mb-3 text-center">
                   <p className="mb-0">"{t.quote}"</p>
                 </blockquote>

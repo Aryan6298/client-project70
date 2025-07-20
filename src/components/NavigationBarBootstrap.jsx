@@ -177,7 +177,7 @@ const NavigationBarBootstrap = () => {
             <img src={logo} alt="Logo" className="rounded logo-img" />
             <div className="d-flex flex-column align-items-start">
               <span className="fw-bold brand-title" style={{color:' #1D2BAA'}}>AMAY FOUNDATION</span>
-              <small className="text-success fst-italic tagline">Act Clean. Think Green. Arise United.</small>
+              <small className="text-success fst-italic tagline">शुद्धचित्तेन सेवा यत्र, तत्र कल्याणम्</small>
             </div>
           </Link>
 

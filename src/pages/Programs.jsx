@@ -93,29 +93,29 @@ const Programs = () => {
           else initialAnim = { x: 60, opacity: 0 }; // fade left
           return (
             <motion.div
-              className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
-              key={idx}
-              id={
-                prog.title === 'Clean-Up Drives' ? 'cleanup'
-                : prog.title === 'Tree Plantation' ? 'treeplantation'
-                : prog.title === 'Waste Management' ? 'wastemanagement'
-                : undefined
-              }
+            className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
+            key={idx}
+            id={
+              prog.title === 'Clean-Up Drives' ? 'cleanup'
+              : prog.title === 'Tree Plantation' ? 'treeplantation'
+              : prog.title === 'Waste Management' ? 'wastemanagement'
+              : undefined
+            }
               initial={initialAnim}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5 }}
-            >
+          >
               <motion.div className="whatwedo-img-wrap"
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <img src={prog.image} alt={prog.title} className="whatwedo-img" loading="lazy" />
-                <div className="whatwedo-gallery">
-                  {prog.gallery.map((img, i) => (
-                    <Link to="/gallery" key={i}>
+              <img src={prog.image} alt={prog.title} className="whatwedo-img" loading="lazy" />
+              <div className="whatwedo-gallery">
+                {prog.gallery.map((img, i) => (
+                  <Link to="/gallery" key={i}>
                       <motion.img
                         src={img}
                         alt={prog.title + ' gallery ' + (i+1)}
@@ -127,9 +127,9 @@ const Programs = () => {
                         transition={{ duration: 0.4, delay: 0.05 * i }}
                         whileHover={{ scale: 1.07, boxShadow: '0 4px 16px rgba(29,44,170,0.13)' }}
                       />
-                    </Link>
-                  ))}
-                </div>
+                  </Link>
+                ))}
+              </div>
               </motion.div>
               <motion.div className="whatwedo-content"
                 initial={{ y: 40, opacity: 0 }}
@@ -137,10 +137,10 @@ const Programs = () => {
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
               >
-                <h2 className="whatwedo-program-title">{prog.title}</h2>
-                {prog.text.map((line, i) => (
-                  <p className="whatwedo-program-desc" key={i}>{line}</p>
-                ))}
+              <h2 className="whatwedo-program-title">{prog.title}</h2>
+              {prog.text.map((line, i) => (
+                <p className="whatwedo-program-desc" key={i}>{line}</p>
+              ))}
               </motion.div>
             </motion.div>
           );

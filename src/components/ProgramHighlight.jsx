@@ -9,22 +9,22 @@ import digiLibraryImg from '../assets/images/gallery12.jpg';
 const programs = [
   {
     image: studyMallImg,
-    title: 'Clean-Up Drives',
-    description: 'Organizing community clean-up events to remove waste and beautify our surroundings.',
+    title: 'Livelihood',
+    description: 'Our Livelihood Program focuses on equipping individuals—especially women, youth, and marginalized communities—with the skills, resources, and confidence.',
     buttonText: 'Read more',
     link: '/programs#cleanup'
   },
   {
     image: studyFinImg,
-    title: 'Tree Plantation',
-    description: 'Planting trees to restore green cover and combat climate change.',
+    title: ' Carbon Footprint',
+    description: 'Our work focuses on reducing carbon emissions and promoting sustainable living practices at the grassroots level. We educate communities on environmental responsibility while implementing low-carbon solutions in our programs.',
     buttonText: 'Read More',
     link: '/programs#treeplantation'
   },
   {
     image: digiLibraryImg,
-    title: 'Waste Management',
-    description: 'Promoting recycling, waste segregation, and responsible disposal practices.',
+    title: 'Capacity Building',
+    description: ' Our Capacity Building Program focuses on enhancing the skills, knowledge, and organizational strength of community members, local leaders, and partner organizations.',
     buttonText: 'Read more',
     link: '/programs#wastemanagement'
   }

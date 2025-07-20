@@ -16,15 +16,15 @@ import joinImage from '../assets/images/volunteer.jpg';
 
 const teamMembers = [
   {
-    name: 'Rachna Shukla',
+    name: 'Mrs. Rachna Shukla',
     designation: 'Founder & Director',
-    bio: 'Rachna is the visionary behind our foundation, leading with passion and a deep commitment to environmental sustainability.',
+    bio: 'Mrs. Rachna is the visionary behind our foundation, leading with passion and a deep commitment to environmental sustainability.',
     image: rachnaShukla,
   },
   {
-    name: 'Raheesh Prasad Patel',
+    name: 'Mr. Raheesh Prasad Patel',
     designation: 'Operations Head',
-    bio: 'Raheesh oversees all our environmental projects, ensuring that our programs run smoothly and effectively on the ground.',
+    bio: 'Mr. Raheesh oversees all our environmental projects, ensuring that our programs run smoothly and effectively on the ground.',
     image: raheeshPatel,
   },
   {
@@ -34,15 +34,15 @@ const teamMembers = [
     image: drAshok,
   },
   {
-    name: 'Dinesh Singh Yadav',
+    name: 'Mr. Dinesh Singh Yadav',
     designation: 'Community Outreach Coordinator',
-    bio: 'Dinesh is the bridge between our foundation and the communities we serve, fostering trust and collaboration for a cleaner environment.',
+    bio: 'Mr. Dinesh is the bridge between our foundation and the communities we serve, fostering trust and collaboration for a cleaner environment.',
     image: dineshYadav,
   },
   {
-    name: 'Kamalesh Birla',
+    name: 'Mr. Kamalesh Birla',
     designation: 'Finance & Compliance Officer',
-    bio: 'Kamalesh ensures our financial health and adherence to all regulations, maintaining our integrity and transparency.',
+    bio: 'Mr. Kamalesh ensures our financial health and adherence to all regulations, maintaining our integrity and transparency.',
     image: kamaleshBirla,
   },
 ];
@@ -55,20 +55,20 @@ const OurTeam = () => {
       transition={{ duration: 0.4 }}
     >
       <motion.div className="team-header"
-        initial={{ y: -40, opacity: 0 }}
+        initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.7 }}
         transition={{ duration: 0.4 }}
       >
         <motion.h1 className="team-title"
-          initial={{ x: -60, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 0.4 }}
         >Our Team</motion.h1>
         <motion.p className="team-intro"
-          initial={{ x: 60, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 0.4 }}
         >
@@ -76,32 +76,26 @@ const OurTeam = () => {
         </motion.p>
       </motion.div>
       <div className="team-grid">
-        {teamMembers.map((member, index) => {
-          // Alternate animation directions for cards
-          let initialAnim = {};
-          if (index % 2 === 0) initialAnim = { x: -60, opacity: 0 }; // fade right
-          else initialAnim = { x: 60, opacity: 0 }; // fade left
-          return (
-            <motion.div
-              className="team-card"
-              key={index}
-              initial={initialAnim}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.4 }}
-              whileHover={{ scale: 1.04, boxShadow: '0 8px 24px rgba(255,102,0,0.13)' }}
-            >
-              <div className="team-card__image-container">
-                <img src={member.image} alt={member.name} className="team-card__image" loading="lazy" />
-              </div>
-              <div className="team-card__content">
-                <h3 className="team-card__name">{member.name}</h3>
-                <p className="team-card__designation">{member.designation}</p>
-                <p className="team-card__bio">{member.bio}</p>
-              </div>
-            </motion.div>
-          );
-        })}
+        {teamMembers.map((member, index) => (
+          <motion.div
+            className="team-card"
+            key={index}
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ scale: 1.04, boxShadow: '0 8px 24px rgba(255,102,0,0.13)' }}
+          >
+            <div className="team-card__image-container">
+              <img src={member.image} alt={member.name} className="team-card__image" loading="lazy" />
+            </div>
+            <div className="team-card__content">
+              <h3 className="team-card__name">{member.name}</h3>
+              <p className="team-card__designation">{member.designation}</p>
+              <p className="team-card__bio">{member.bio}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
       {/* CTA Sections */}
       <motion.div className="cta-section-container"
@@ -111,8 +105,8 @@ const OurTeam = () => {
         transition={{ duration: 0.4 }}
       >
         <motion.div className="cta-section"
-          initial={{ x: -60, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 0.4 }}
         >
@@ -126,8 +120,8 @@ const OurTeam = () => {
           </div>
         </motion.div>
         <motion.div className="cta-section"
-          initial={{ x: 60, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 0.4 }}
         >

@@ -1,6 +1,6 @@
 import React from 'react';
 import aboutImg from '../assets/images/logo-amay.png';
-import founderImg from '../assets/images/service01.jpg';
+import founderImg from '../assets/images/team-img01-rachna-shukla.png';
 import registrationImg from '../assets/images/registration-amay.png';
 import './About.css';
 import { motion } from 'framer-motion';
@@ -79,7 +79,7 @@ const About = () => {
           <p>
             "Amay Foundation began with a passion for making a real difference in our environment. We believe that every small action counts, and together, we can create a lasting impact. Thank you to everyone who supports our mission. We look forward to expanding our work to many more causes in the future."
           </p>
-          <p className="founder-name">- xyz, Founder</p>
+          <p className="founder-name">Rachna Shukla</p>
         </motion.div>
       </motion.section>
       <motion.section className="about-registration"

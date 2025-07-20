@@ -32,7 +32,7 @@ const Topbar = () => {
       </div>
       <div className="d-flex align-items-center gap-2 topbar__contact">
         <span className="topbar__email-icon"><FontAwesomeIcon icon={faEnvelope} /></span>
-        <span className="topbar__email">xyz@gmail.com</span>
+        <a href="mailto:amayfoundation2023@gmail.com" className="topbar__email" style={{textDecoration: 'none', color: 'inherit'}}>amayfoundation2023@gmail.com</a>
       </div>
     </div>
   );

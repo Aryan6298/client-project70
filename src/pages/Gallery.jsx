@@ -79,7 +79,7 @@ const Gallery = () => {
             );
           } else {
             return (
-              <div className="gallery-card" key={index}>
+          <div className="gallery-card" key={index}>
                 <img
                   src={image.src}
                   alt={`Gallery Scene ${index + 1}`}
@@ -87,10 +87,10 @@ const Gallery = () => {
                   loading="lazy"
                   style={{ touchAction: 'manipulation' }}
                 />
-                <div className="gallery-card-overlay">
-                  <p className="gallery-card-caption">{image.caption}</p>
-                </div>
-              </div>
+            <div className="gallery-card-overlay">
+              <p className="gallery-card-caption">{image.caption}</p>
+            </div>
+          </div>
             );
           }
         })}
