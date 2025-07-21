@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/client-project70/static/css/main.27b714f6.css",
-    "main.js": "/client-project70/static/js/main.65624705.js",
+    "main.js": "/client-project70/static/js/main.adf4f4cb.js",
     "static/css/904.abc9f368.chunk.css": "/client-project70/static/css/904.abc9f368.chunk.css",
     "static/js/904.29e5a0a7.chunk.js": "/client-project70/static/js/904.29e5a0a7.chunk.js",
     "static/css/453.7dd5176b.chunk.css": "/client-project70/static/css/453.7dd5176b.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/206.693de4e6.chunk.css": "/client-project70/static/css/206.693de4e6.chunk.css",
     "static/js/206.2b77f2c4.chunk.js": "/client-project70/static/js/206.2b77f2c4.chunk.js",
     "static/css/757.31b93ab7.chunk.css": "/client-project70/static/css/757.31b93ab7.chunk.css",
-    "static/js/757.aa8bafe1.chunk.js": "/client-project70/static/js/757.aa8bafe1.chunk.js",
+    "static/js/757.91077a40.chunk.js": "/client-project70/static/js/757.91077a40.chunk.js",
     "static/css/858.47e73267.chunk.css": "/client-project70/static/css/858.47e73267.chunk.css",
     "static/js/858.fb631725.chunk.js": "/client-project70/static/js/858.fb631725.chunk.js",
     "static/css/917.121a3a04.chunk.css": "/client-project70/static/css/917.121a3a04.chunk.css",
@@ -71,7 +71,7 @@
     "static/media/sponser02.jpg": "/client-project70/static/media/sponser02.4bf7686a20e0a8b0d8c9.jpg",
     "index.html": "/client-project70/index.html",
     "main.27b714f6.css.map": "/client-project70/static/css/main.27b714f6.css.map",
-    "main.65624705.js.map": "/client-project70/static/js/main.65624705.js.map",
+    "main.adf4f4cb.js.map": "/client-project70/static/js/main.adf4f4cb.js.map",
     "904.abc9f368.chunk.css.map": "/client-project70/static/css/904.abc9f368.chunk.css.map",
     "904.29e5a0a7.chunk.js.map": "/client-project70/static/js/904.29e5a0a7.chunk.js.map",
     "453.7dd5176b.chunk.css.map": "/client-project70/static/css/453.7dd5176b.chunk.css.map",
@@ -82,7 +82,7 @@
     "206.693de4e6.chunk.css.map": "/client-project70/static/css/206.693de4e6.chunk.css.map",
     "206.2b77f2c4.chunk.js.map": "/client-project70/static/js/206.2b77f2c4.chunk.js.map",
     "757.31b93ab7.chunk.css.map": "/client-project70/static/css/757.31b93ab7.chunk.css.map",
-    "757.aa8bafe1.chunk.js.map": "/client-project70/static/js/757.aa8bafe1.chunk.js.map",
+    "757.91077a40.chunk.js.map": "/client-project70/static/js/757.91077a40.chunk.js.map",
     "858.47e73267.chunk.css.map": "/client-project70/static/css/858.47e73267.chunk.css.map",
     "858.fb631725.chunk.js.map": "/client-project70/static/js/858.fb631725.chunk.js.map",
     "917.121a3a04.chunk.css.map": "/client-project70/static/css/917.121a3a04.chunk.css.map",
@@ -98,6 +98,6 @@
   },
   "entrypoints": [
     "static/css/main.27b714f6.css",
-    "static/js/main.65624705.js"
+    "static/js/main.adf4f4cb.js"
   ]
 }
