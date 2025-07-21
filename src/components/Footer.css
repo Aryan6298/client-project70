@@ -303,6 +303,10 @@
   .footer__logo {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: #1D2BAA;
+    background: rgba(255,255,255,0.45);
+    font-size: 1.4rem;
+    padding: 0.4rem 1.2rem 0.4rem 1rem;
   }
 }
 
