@@ -41,7 +41,7 @@ const DonateNow = () => (
       >
         <div className="donate-now-upi-label">UPI ID:</div>
         <div className="donate-now-upi-value">amayfoundation@upi</div>
-        <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="donate-now-btn">Need Help?</a>
+        <a href="https://wa.me/+918889583332" target="_blank" rel="noopener noreferrer" className="donate-now-btn">Need Help?</a>
       </motion.div>
     </motion.div>
   </motion.div>

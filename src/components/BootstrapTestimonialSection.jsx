@@ -1,99 +1,273 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// Function to generate initials from name
-const getInitials = (name) => {
-  return name
-    .split(' ')
-    .map(word => word.charAt(0))
-    .join('')
-    .toUpperCase()
-    .slice(0, 2); // Take only first 2 initials
-};
+import { motion } from 'framer-motion';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const testimonials = [
   {
-    quote: 'Amay Foundation organized a clean-up drive that transformed our neighborhood park. We are so grateful!',
+    quote: 'Amay Foundation organized a clean-up drive that transformed our neighborhood park. Their dedication to environmental conservation is truly inspiring!',
     name: 'Ajay Kumar',
+    role: 'Community Member',
     initials: 'AK'
   },
   {
-    quote: 'The tree plantation event was inspiring. Our community feels greener and more hopeful.',
+    quote: 'The tree plantation event was inspiring. Our community feels greener and more hopeful. Their commitment to sustainability is making a real difference.',
     name: 'Kavita Mehta',
+    role: 'Local Resident',
     initials: 'KM'
   },
   {
-    quote: 'Thanks to Amay Foundation, we learned how to manage waste better and keep our area clean.',
+    quote: 'Thanks to Amay Foundation, we learned how to manage waste better and keep our area clean. Their workshops are informative and practical.',
     name: 'Rahul Sharma',
+    role: 'Volunteer',
     initials: 'RS'
   }
 ];
 
-const BootstrapTestimonialSection = () => (
-  <section className="container py-4 d-flex flex-column align-items-center justify-content-center">
-    <style>{`
+const BootstrapTestimonialSection = () => {
+  useEffect(() => {
+    const initCarousel = async () => {
+      try {
+        if (typeof window !== 'undefined') {
+          // Import Bootstrap JS and get the Carousel module
+          const bootstrap = await import('bootstrap/dist/js/bootstrap.bundle.min.js');
+          
+          const carousel = document.getElementById('testimonialCarousel');
+          if (carousel && bootstrap.Carousel) {
+            new bootstrap.Carousel(carousel, {
+              interval: 4000,
+              ride: 'carousel',
+              wrap: true
+            });
+          }
+        }
+      } catch (error) {
+        console.error('Error initializing carousel:', error);
+      }
+    };
+
+    initCarousel();
+  }, []);
+
+  return (
+    <motion.section 
+      className="container py-5 d-flex flex-column align-items-center justify-content-center"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <style>{`
+      .testimonial-section {
+        background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+        backdrop-filter: blur(10px);
+        border-top: 4px solid #ff6600;
+      }
+      
       .testimonial-initials {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: bold;
         color: white;
-        background: linear-gradient(135deg, #ff6600, #ea321d);
-        box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+        background: linear-gradient(135deg, #ff6600, #ff8533);
+        box-shadow: 0 8px 24px rgba(255, 102, 0, 0.2);
+        position: relative;
+        z-index: 1;
       }
+
+      .testimonial-quote {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #444;
+        position: relative;
+        z-index: 0;
+      }
+
+      .quote-icon {
+        position: absolute;
+        top: -15px;
+        left: -10px;
+        color: rgba(255, 102, 0, 0.1);
+        font-size: 4rem;
+        z-index: -1;
+      }
+
+      .testimonial-name {
+        color: #1D2BAA;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .testimonial-role {
+        color: #ff6600;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin: 0 -20px;
+        border: 2px solid #ff6600;
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background: #fff7f2;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(48%) sepia(90%) saturate(2299%) hue-rotate(346deg) brightness(101%) contrast(101%);
+      }
+
+      .review-btn {
+        background: linear-gradient(135deg, #ff6600, #ff8533);
+        border: none;
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 50px;
+      }
+
+      .review-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.2);
+        background: linear-gradient(135deg, #ff8533, #ff6600);
+      }
+
+      .section-title {
+        position: relative;
+        display: inline-block;
+        color: #1D2BAA;
+        font-weight: 700;
+        padding-bottom: 15px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: #ff6600;
+        border-radius: 2px;
+      }
+
+      .title-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
       @media (max-width: 767.98px) {
         .testimonial-initials {
           width: 60px;
           height: 60px;
           font-size: 18px;
         }
+        .testimonial-quote {
+          font-size: 1rem;
+          padding: 0 1rem;
+        }
+        .quote-icon {
+          font-size: 3rem;
+        }
       }
     `}</style>
-    <div className="bg-white rounded-4 shadow p-3 p-md-5 w-100" style={{maxWidth: '540px'}}>
-      <h2 className="text-center mb-4">Testimonials</h2>
-      <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          {testimonials.map((t, i) => (
-            <div className={`carousel-item${i === 0 ? ' active' : ''}`} key={i}>
-              <div className="d-flex flex-column align-items-center">
-                <div className="testimonial-initials mb-3">
-                  {t.initials}
-                </div>
-                <blockquote className="blockquote mb-3 text-center">
-                  <p className="mb-0">"{t.quote}"</p>
-                </blockquote>
-                <footer className="blockquote-footer">{t.name}</footer>
-              </div>
-            </div>
-          ))}
+      <motion.div 
+        className="testimonial-section rounded-4 shadow-lg p-4 p-md-5 w-100"
+        style={{maxWidth: '800px'}}
+        initial={{ scale: 0.95 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <div className="title-wrapper">
+          <motion.h2 
+            className="section-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            What People Say About Us
+          </motion.h2>
         </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div className="text-center mt-4">
-        <p className="mb-2">Loved our work? Share your experience and help others discover us!</p>
-        <a
-          href="https://www.google.com/search?q=amay+foundation+reviews"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-warning fw-bold px-4 py-2"
-          style={{ borderRadius: '2rem', color: '#fff', background: '#ff6600', border: 'none' }}
+        <div 
+          id="testimonialCarousel" 
+          className="carousel slide" 
+          data-bs-ride="carousel"
+          data-bs-interval="4000"
         >
-          Leave a Google Review
-        </a>
-      </div>
-    </div>
-  </section>
-);
+          <div className="carousel-inner">
+            {testimonials.map((t, i) => (
+              <div className={`carousel-item${i === 0 ? ' active' : ''}`} key={i}>
+                <div className="d-flex flex-column align-items-center">
+                  <motion.div 
+                    className="testimonial-initials mb-4"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {t.initials}
+                  </motion.div>
+                  <div className="position-relative mb-4">
+                    <FaQuoteLeft className="quote-icon" />
+                    <blockquote className="testimonial-quote text-center px-md-4">
+                      {t.quote}
+                    </blockquote>
+                  </div>
+                  <p className="testimonial-name mb-1">{t.name}</p>
+                  <p className="testimonial-role mb-0">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+        <motion.div 
+          className="text-center mt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <p className="mb-3" style={{ color: '#666' }}>Loved our work? Share your experience and help others discover us!</p>
+          <a
+            href="https://www.google.com/search?q=amay+foundation+reviews"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn review-btn text-white"
+          >
+            Leave a Google Review
+          </a>
+        </motion.div>
+      </motion.div>
+    </motion.section>
+  );
+};
 
 export default BootstrapTestimonialSection; 

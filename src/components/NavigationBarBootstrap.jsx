@@ -137,14 +137,11 @@ const NavigationBarBootstrap = () => {
         }
 
         .dropdown-icon {
-          transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+          transition: transform 0.3s ease;
         }
 
-        .nav-item.dropdown.show .dropdown-icon {
-          transform: rotate(180deg) scale(1.2);
-        }
-        .custom-navbar .nav-item.dropdown:hover .dropdown-icon {
-          transform: rotate(180deg) scale(1.2);
+        .nav-dropdown-combo:hover .dropdown-icon {
+          transform: rotate(180deg);
         }
 
         .custom-navbar .nav-item.dropdown:hover .dropdown-menu {
@@ -219,7 +216,11 @@ const NavigationBarBootstrap = () => {
 
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top custom-navbar" style={{ zIndex: 1090, marginTop }}>
         <div className="container-fluid px-4">
-          <Link className="navbar-brand d-flex align-items-start gap-2" to="/">
+          <Link 
+            className="navbar-brand d-flex align-items-start gap-2" 
+            to="/" 
+            onClick={handleNavLinkClick}
+          >
             <img src={logo} alt="Logo" className="rounded logo-img" />
             <div className="d-flex flex-column align-items-start">
               <span className="fw-bold brand-title" style={{color:' #1D2BAA'}}>AMAY FOUNDATION</span>
@@ -249,7 +250,15 @@ const NavigationBarBootstrap = () => {
                   <NavLink
                     className="nav-link d-flex align-items-center gap-1"
                     to="/programs"
-                    onClick={handleNavLinkClick}
+                    onClick={(e) => {
+                      if (window.innerWidth < 992) {
+                        e.preventDefault();
+                        setMobileDropdownOpen(!mobileDropdownOpen);
+                      } else {
+                        handleNavLinkClick();
+                        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+                      }
+                    }}
                     style={{ cursor: 'pointer', border: 'none', background: 'none', boxShadow: 'none' }}
                   >
                     What We Do
@@ -262,12 +271,27 @@ const NavigationBarBootstrap = () => {
                     aria-expanded={mobileDropdownOpen}
                     style={{ cursor: 'pointer', marginLeft: '-0.3rem', fontSize: '1.2em', background: 'none', border: 'none', boxShadow: 'none' }}
                   >
-                    <IoMdArrowDropdown className="dropdown-icon" style={{transform: mobileDropdownOpen ? 'rotate(180deg)' : undefined, transition: 'transform 0.3s'}} />
+                    <IoMdArrowDropdown 
+                      className="dropdown-icon" 
+                      style={{
+                        transform: mobileDropdownOpen ? 'rotate(180deg)' : undefined,
+                        transition: 'transform 0.3s ease'
+                      }} 
+                    />
                   </span>
                 </div>
                 {/* Mobile dropdown (visible on small screens only) */}
                 <ul className={`mobile-dropdown dropdown-menu${mobileDropdownOpen ? ' open' : ''} d-lg-none`}
-                  style={{ position: 'static', boxShadow: 'none', border: 'none', background: 'transparent', paddingLeft: 0 }}>
+                  style={{ 
+                    position: 'static', 
+                    boxShadow: 'none', 
+                    border: 'none', 
+                    background: 'transparent', 
+                    paddingLeft: 0,
+                    maxHeight: mobileDropdownOpen ? '400px' : '0',
+                    opacity: mobileDropdownOpen ? '1' : '0',
+                    transition: 'max-height 0.3s ease-in-out, opacity 0.2s ease-in-out'
+                  }}>
                   <li><NavLink className="dropdown-item" to="/programs#capacity" onClick={handleNavLinkClick}>Capacity Building</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#carbon" onClick={handleNavLinkClick}>Carbon Footprint</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#livelihood" onClick={handleNavLinkClick}>Livelihood</NavLink></li>
@@ -286,10 +310,13 @@ const NavigationBarBootstrap = () => {
                 </ul>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to="/future-plans" onClick={handleNavLinkClick}>Future Plans</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/gallery" onClick={handleNavLinkClick}>Media Features</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/become-volunteer" onClick={handleNavLinkClick}>Volunteer</NavLink>
+                <NavLink className="nav-link" to="/join-us" onClick={handleNavLinkClick}>Join Us</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/our-team" onClick={handleNavLinkClick}>Our Team</NavLink>

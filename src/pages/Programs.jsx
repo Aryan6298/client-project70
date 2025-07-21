@@ -9,7 +9,7 @@ import homeStudyFinImg from '../assets/images/sapling.jpg';
 import homeDigiLibraryImg from '../assets/images/capacity-building01.jpg';
 import gallery01 from '../assets/images/gallery01.jpg';
 import gallery02 from '../assets/images/gallery02.jpg';
-import gallery03 from '../assets/images/gallery03.jpg';
+import newspaper01 from '../assets/images/newspaper01.jpg';
 import gallery04 from '../assets/images/gallery04.jpg';
 import gallery05 from '../assets/images/gallery05.jpg';
 import gallery07 from '../assets/images/gallery07.jpg';
@@ -26,7 +26,7 @@ const programs = [
   {
     title: 'Clean-Up Drives',
     image: studyMallImg,
-    gallery: [gallery01, gallery02, gallery03, gallery04],
+    gallery: [gallery01, gallery02, newspaper01, gallery04],
     text: [
       'Organizing community clean-up events to remove waste and beautify our surroundings.',
       'Our volunteers work together to clean streets, parks, and public spaces, fostering a sense of community pride.',
@@ -96,8 +96,8 @@ const Programs = () => {
 
   return (
     <motion.div className="whatwedo-main"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <motion.h1 className="whatwedo-title"
@@ -115,9 +115,6 @@ const Programs = () => {
       <div className="whatwedo-list">
         {/* Render homeHighlights first */}
         {homeHighlights.map((highlight, idx) => {
-          let initialAnim = {};
-          if (idx % 2 === 0) initialAnim = { x: -60, opacity: 0 };
-          else initialAnim = { x: 60, opacity: 0 };
           // Assign ids: capacity, carbon, livelihood
           const ids = ['capacity', 'carbon', 'livelihood'];
           return (
@@ -125,10 +122,10 @@ const Programs = () => {
               className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
               key={`highlight-${idx}`}
               id={ids[idx]}
-              initial={initialAnim}
-              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
               <motion.div className="whatwedo-img-wrap"
                 initial={{ y: 40, opacity: 0 }}
@@ -153,9 +150,6 @@ const Programs = () => {
         })}
         {/* Then render the original programs */}
         {programs.map((prog, idx) => {
-          let initialAnim = {};
-          if (idx % 2 === 0) initialAnim = { x: -60, opacity: 0 };
-          else initialAnim = { x: 60, opacity: 0 };
           // Assign ids: cleanup, treeplantation, wastemanagement
           const ids = ['cleanup', 'treeplantation', 'wastemanagement'];
           return (
@@ -163,10 +157,10 @@ const Programs = () => {
               className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
               key={idx}
               id={ids[idx]}
-              initial={initialAnim}
-              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
               <motion.div className="whatwedo-img-wrap"
                 initial={{ y: 40, opacity: 0 }}

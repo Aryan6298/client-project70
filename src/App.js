@@ -14,12 +14,13 @@ const Gallery = lazy(() => import('./pages/Gallery.jsx'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
 const OurTeam = lazy(() => import('./pages/OurTeam.jsx'));
 const DonateNow = lazy(() => import('./pages/DonateNow'));
-const BecomeVolunteer = lazy(() => import('./pages/BecomeVolunteer.jsx'));
+const JoinUs = lazy(() => import('./pages/JoinUs.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 // Add lazy imports for new program highlight pages
 const ProgramHighlightCapacity = lazy(() => import('./pages/ProgramHighlightCapacity.jsx'));
 const ProgramHighlightCarbon = lazy(() => import('./pages/ProgramHighlightCarbon.jsx'));
 const ProgramHighlightLivelihood = lazy(() => import('./pages/ProgramHighlightLivelihood.jsx'));
+const FuturePlans = lazy(() => import('./pages/FuturePlans.jsx'));
 
 function ScrollToTop() {
   const location = useLocation();
@@ -87,11 +88,12 @@ function App() {
           <Route path="/programs/capacity" element={<ProgramHighlightCapacity />} />
           <Route path="/programs/carbon" element={<ProgramHighlightCarbon />} />
           <Route path="/programs/livelihood" element={<ProgramHighlightLivelihood />} />
+          <Route path="/future-plans" element={<FuturePlans />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/donatenow" element={<DonateNow />} />
-          <Route path="/become-volunteer" element={<BecomeVolunteer />} />
+          <Route path="/join-us" element={<JoinUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

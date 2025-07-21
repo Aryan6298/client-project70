@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css';
-import backgroundImage from '../assets/images/crousal-img01.jpg'; // Using an existing image
+import backgroundImage from '../assets/images/crousal-img01.jpg';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -14,41 +14,45 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
     >
       <motion.div className="contact-header-overlay"
-        initial={{ y: -40, opacity: 0 }}
+        initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6 }}
       >
         <motion.h1 className="contact-main-title"
-          initial={{ x: -60, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >Get In Touch</motion.h1>
         <motion.p className="contact-subtitle"
-          initial={{ x: 60, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >We are here to assist you. Feel free to reach out anytime!</motion.p>
       </motion.div>
 
       <motion.div className="contact-card-container"
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
       >
         <motion.div className="contact-card-header"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <h2 className="contact-info-title">Contact Information</h2>
           <p className="contact-availability">We are available 7 days a week!</p>
         </motion.div>
+
         <motion.div className="contact-details-section"
-          initial={{ x: -40, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="contact-detail-item">
+          <motion.div className="contact-detail-item"
+            whileHover={{ y: -5, boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}
+            transition={{ duration: 0.3 }}
+          >
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
             <div>
               <h3 className="contact-detail-title">Mail ID</h3>
@@ -56,27 +60,71 @@ const Contact = () => {
                 amayfoundation2023@gmail.com
               </a>
             </div>
-          </div>
-          <div className="contact-detail-item">
+          </motion.div>
+
+          <motion.div className="contact-detail-item"
+            whileHover={{ y: -5, boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}
+            transition={{ duration: 0.3 }}
+          >
             <FontAwesomeIcon icon={faPhone} className="contact-icon" />
             <div>
               <h3 className="contact-detail-title">Phone</h3>
               <a href="tel:+918889583332" className="contact-detail-link">+91 88895-83332</a>
-              <br />
               <a href="tel:+918982949153" className="contact-detail-link">+91 8982949153</a>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
+
         <motion.div className="contact-social-links"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <a href="https://www.facebook.com" aria-label="Facebook" className="contact-social-icon"><FontAwesomeIcon icon={faFacebookF} /></a>
-          <a href="https://www.twitter.com" aria-label="Twitter" className="contact-social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
-          <a href="https://www.instagram.com" aria-label="Instagram" className="contact-social-icon"><FontAwesomeIcon icon={faInstagram} /></a>
-          <a href="https://www.linkedin.com" aria-label="LinkedIn" className="contact-social-icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-          <a href="https://www.youtube.com" aria-label="YouTube" className="contact-social-icon"><FontAwesomeIcon icon={faYoutube} /></a>
+          <motion.a 
+            href="https://www.facebook.com" 
+            aria-label="Facebook" 
+            className="contact-social-icon"
+            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            transition={{ duration: 0.2 }}
+          >
+            <FontAwesomeIcon icon={faFacebookF} />
+          </motion.a>
+          <motion.a 
+            href="https://www.twitter.com" 
+            aria-label="Twitter" 
+            className="contact-social-icon"
+            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            transition={{ duration: 0.2 }}
+          >
+            <FontAwesomeIcon icon={faTwitter} />
+          </motion.a>
+          <motion.a 
+            href="https://www.instagram.com" 
+            aria-label="Instagram" 
+            className="contact-social-icon"
+            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            transition={{ duration: 0.2 }}
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </motion.a>
+          <motion.a 
+            href="https://www.linkedin.com" 
+            aria-label="LinkedIn" 
+            className="contact-social-icon"
+            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            transition={{ duration: 0.2 }}
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </motion.a>
+          <motion.a 
+            href="https://www.youtube.com" 
+            aria-label="YouTube" 
+            className="contact-social-icon"
+            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            transition={{ duration: 0.2 }}
+          >
+            <FontAwesomeIcon icon={faYoutube} />
+          </motion.a>
         </motion.div>
       </motion.div>
     </motion.div>

@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
+  const handleScrollToTop = () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 0);
+  };
+
   return (
     <motion.footer className="footer"
       initial={{ opacity: 0, y: 40 }}
@@ -33,12 +42,21 @@ const Footer = () => {
         >
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><Link to="/programs">What We Do</Link></li>
-            <li><Link to="/our-team">Our Team</Link></li>
-            <li><Link to="/become-volunteer">Volunteer</Link></li>
-            <li><a href="/gallery">Gallery</a></li>
+            <li><Link to="/" onClick={handleScrollToTop}>Home</Link></li>
+            <li><Link to="/about" onClick={handleScrollToTop}>About Us</Link></li>
+            <li>
+              <Link 
+                to="/programs" 
+                onClick={handleScrollToTop}
+              >
+                What We Do
+              </Link>
+            </li>
+            <li><Link to="/our-team" onClick={handleScrollToTop}>Our Team</Link></li>
+            <li><Link to="/become-volunteer" onClick={handleScrollToTop}>Volunteer</Link></li>
+            <li><Link to="/gallery" onClick={handleScrollToTop}>Media Features</Link></li>
+            <li><Link to="/future-plans" onClick={handleScrollToTop}>Future Plans</Link></li>
+            <li><Link to="/contact" onClick={handleScrollToTop}>Contact Us</Link></li>
           </ul>
         </motion.div>
         <motion.div className="footer__col footer__contact" 

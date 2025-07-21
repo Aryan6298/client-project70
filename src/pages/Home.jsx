@@ -76,7 +76,7 @@ const Home = () => {
         <section className="volunteer-cta-section" data-aos="fade-up" data-aos-delay="300">
           <h2 className="volunteer-cta-title">BECOME VOLUNTEER</h2>
           <p className="volunteer-cta-desc">With an approach of giving back to society, our volunteers are helping us from across the world.</p>
-          <Link to="/become-volunteer" className="volunteer-cta-button">Become a Volunteer</Link>
+          <Link to="/join-us" className="volunteer-cta-button">Join Us</Link>
         </section>
         <section className="counters-section" data-aos="fade-up" data-aos-delay="200">
           <div className="counters-grid">

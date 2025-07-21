@@ -144,7 +144,7 @@ const HeroSection = () => {
                   <p className={`hero__tagline${textAnimated ? ' hero__text-animate' : ''}`} key={current + '-tagline'}>{slide.tagline}</p>
                   <div className="hero__actions">
                     <Link to="/about" className="hero__cta hero__cta--primary">Know More</Link>
-                    <a href="/become-volunteer" className="hero__cta hero__cta--secondary">Join Us</a>
+                    <Link to="/join-us" className="hero__cta hero__cta--secondary">Join Us</Link>
                   </div>
                 </div>
               </div>

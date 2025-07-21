@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './GalleryCarousel.css';
 import gallery01 from '../assets/images/gallery01.jpg';
 import gallery02 from '../assets/images/gallery02.jpg';
-import gallery03 from '../assets/images/gallery03.jpg';
+import newspaper01 from '../assets/images/newspaper01.jpg';
 import gallery04 from '../assets/images/gallery04.jpg';
 import gallery05 from '../assets/images/gallery05.jpg';
 import gallery06 from '../assets/images/gallery06.jpg';
@@ -20,7 +20,7 @@ import gallery16 from '../assets/images/gallery16.jpg';
 const galleryImages = [
   { src: gallery01, caption: 'Collaborative efforts to restore and protect our local ecosystems.' },
   { src: gallery02, caption: 'Teamwork makes the dream work in our mission for a greener planet.' },
-  { src: gallery03, caption: 'Dedicated volunteers working together to conserve natural habitats.' },
+  { src: newspaper01, caption: 'Dedicated volunteers working together to conserve natural habitats.' },
   { src: gallery04, caption: "United for change: our team's commitment to environmental sustainability." },
   { src: gallery05, caption: 'Every hand helps in our community-driven conservation projects.' },
   { src: gallery06, caption: 'Planting seeds of hope for a more sustainable and vibrant future.' },
