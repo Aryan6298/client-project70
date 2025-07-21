@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import studyMallImg from '../assets/images/gallery06.jpg';
 import studyFinImg from '../assets/images/sapling.jpg';
 import digiLibraryImg from '../assets/images/gallery12.jpg';
+import homeStudyMallImg from '../assets/images/livelyhood01.jpg';
+import homeStudyFinImg from '../assets/images/sapling.jpg';
+import homeDigiLibraryImg from '../assets/images/capacity-building01.jpg';
 import gallery01 from '../assets/images/gallery01.jpg';
 import gallery02 from '../assets/images/gallery02.jpg';
 import gallery03 from '../assets/images/gallery03.jpg';
@@ -52,6 +55,30 @@ const programs = [
   }
 ];
 
+const homeHighlights = [
+  {
+    image: homeDigiLibraryImg,
+    title: 'Capacity Building',
+    description: 'Our Capacity Building Program focuses on enhancing the skills, knowledge, and organizational strength of community members, local leaders, and partner organizations.',
+    link: '/programs/capacity',
+    buttonText: 'Read more'
+  },
+  {
+    image: homeStudyFinImg,
+    title: 'Carbon Footprint',
+    description: 'Our work focuses on reducing carbon emissions and promoting sustainable living practices at the grassroots level. We educate communities on environmental responsibility while implementing low-carbon solutions in our programs.',
+    link: '/programs/carbon',
+    buttonText: 'Read more'
+  },
+  {
+    image: homeStudyMallImg,
+    title: 'Livelihood',
+    description: 'Our Livelihood Program focuses on equipping individuals—especially women, youth, and marginalized communities—with the skills, resources, and confidence.',
+    link: '/programs/livelihood',
+    buttonText: 'Read more'
+  }
+];
+
 const Programs = () => {
   const location = useLocation();
 
@@ -86,36 +113,71 @@ const Programs = () => {
         At Amay Foundation, we are dedicated to making a positive impact on the environment and our communities. Our core initiatives are designed to create lasting change and inspire others to join our mission.
       </motion.p>
       <div className="whatwedo-list">
-        {programs.map((prog, idx) => {
-          // Alternate animation directions for sections
+        {/* Render homeHighlights first */}
+        {homeHighlights.map((highlight, idx) => {
           let initialAnim = {};
-          if (idx % 2 === 0) initialAnim = { x: -60, opacity: 0 }; // fade right
-          else initialAnim = { x: 60, opacity: 0 }; // fade left
+          if (idx % 2 === 0) initialAnim = { x: -60, opacity: 0 };
+          else initialAnim = { x: 60, opacity: 0 };
+          // Assign ids: capacity, carbon, livelihood
+          const ids = ['capacity', 'carbon', 'livelihood'];
           return (
             <motion.div
-            className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
-            key={idx}
-            id={
-              prog.title === 'Clean-Up Drives' ? 'cleanup'
-              : prog.title === 'Tree Plantation' ? 'treeplantation'
-              : prog.title === 'Waste Management' ? 'wastemanagement'
-              : undefined
-            }
+              className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
+              key={`highlight-${idx}`}
+              id={ids[idx]}
               initial={initialAnim}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5 }}
-          >
+            >
               <motion.div className="whatwedo-img-wrap"
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-              <img src={prog.image} alt={prog.title} className="whatwedo-img" loading="lazy" />
-              <div className="whatwedo-gallery">
-                {prog.gallery.map((img, i) => (
-                  <Link to="/gallery" key={i}>
+                <img src={highlight.image} alt={highlight.title} className="whatwedo-img" loading="lazy" />
+              </motion.div>
+              <motion.div className="whatwedo-content"
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <h2 className="whatwedo-program-title">{highlight.title}</h2>
+                <p className="whatwedo-program-desc">{highlight.description}</p>
+                <Link to={highlight.link} className="whatwedo-readmore-btn">{highlight.buttonText}</Link>
+              </motion.div>
+            </motion.div>
+          );
+        })}
+        {/* Then render the original programs */}
+        {programs.map((prog, idx) => {
+          let initialAnim = {};
+          if (idx % 2 === 0) initialAnim = { x: -60, opacity: 0 };
+          else initialAnim = { x: 60, opacity: 0 };
+          // Assign ids: cleanup, treeplantation, wastemanagement
+          const ids = ['cleanup', 'treeplantation', 'wastemanagement'];
+          return (
+            <motion.div
+              className={`whatwedo-section${idx % 2 === 1 ? ' reverse' : ''}`}
+              key={idx}
+              id={ids[idx]}
+              initial={initialAnim}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div className="whatwedo-img-wrap"
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <img src={prog.image} alt={prog.title} className="whatwedo-img" loading="lazy" />
+                <div className="whatwedo-gallery">
+                  {prog.gallery.map((img, i) => (
+                    <Link to="/gallery" key={i}>
                       <motion.img
                         src={img}
                         alt={prog.title + ' gallery ' + (i+1)}
@@ -127,9 +189,9 @@ const Programs = () => {
                         transition={{ duration: 0.4, delay: 0.05 * i }}
                         whileHover={{ scale: 1.07, boxShadow: '0 4px 16px rgba(29,44,170,0.13)' }}
                       />
-                  </Link>
-                ))}
-              </div>
+                    </Link>
+                  ))}
+                </div>
               </motion.div>
               <motion.div className="whatwedo-content"
                 initial={{ y: 40, opacity: 0 }}
@@ -137,10 +199,10 @@ const Programs = () => {
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
               >
-              <h2 className="whatwedo-program-title">{prog.title}</h2>
-              {prog.text.map((line, i) => (
-                <p className="whatwedo-program-desc" key={i}>{line}</p>
-              ))}
+                <h2 className="whatwedo-program-title">{prog.title}</h2>
+                {prog.text.map((line, i) => (
+                  <p className="whatwedo-program-desc" key={i}>{line}</p>
+                ))}
               </motion.div>
             </motion.div>
           );

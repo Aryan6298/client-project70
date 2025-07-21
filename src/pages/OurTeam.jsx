@@ -77,15 +77,15 @@ const OurTeam = () => {
       </motion.div>
       <div className="team-grid">
         {teamMembers.map((member, index) => (
-          <motion.div
-            className="team-card"
-            key={index}
+            <motion.div
+              className="team-card"
+              key={index}
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            whileHover={{ scale: 1.04, boxShadow: '0 8px 24px rgba(255,102,0,0.13)' }}
-          >
+              whileHover={{ scale: 1.04, boxShadow: '0 8px 24px rgba(255,102,0,0.13)' }}
+            >
             <div className="team-card__image-container">
               <img src={member.image} alt={member.name} className="team-card__image" loading="lazy" />
             </div>
@@ -94,7 +94,7 @@ const OurTeam = () => {
               <p className="team-card__designation">{member.designation}</p>
               <p className="team-card__bio">{member.bio}</p>
             </div>
-          </motion.div>
+            </motion.div>
         ))}
       </div>
       {/* CTA Sections */}

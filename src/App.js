@@ -16,6 +16,10 @@ const OurTeam = lazy(() => import('./pages/OurTeam.jsx'));
 const DonateNow = lazy(() => import('./pages/DonateNow'));
 const BecomeVolunteer = lazy(() => import('./pages/BecomeVolunteer.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+// Add lazy imports for new program highlight pages
+const ProgramHighlightCapacity = lazy(() => import('./pages/ProgramHighlightCapacity.jsx'));
+const ProgramHighlightCarbon = lazy(() => import('./pages/ProgramHighlightCarbon.jsx'));
+const ProgramHighlightLivelihood = lazy(() => import('./pages/ProgramHighlightLivelihood.jsx'));
 
 function ScrollToTop() {
   const location = useLocation();
@@ -80,6 +84,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/programs/capacity" element={<ProgramHighlightCapacity />} />
+          <Route path="/programs/carbon" element={<ProgramHighlightCarbon />} />
+          <Route path="/programs/livelihood" element={<ProgramHighlightLivelihood />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/our-team" element={<OurTeam />} />

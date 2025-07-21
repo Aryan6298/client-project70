@@ -27,9 +27,7 @@ const Topbar = () => {
         <a href="https://www.facebook.com" aria-label="Facebook" className="topbar__icon"><FontAwesomeIcon icon={faFacebookF} /></a>
         <a href="https://www.twitter.com" aria-label="Twitter" className="topbar__icon"><FontAwesomeIcon icon={faTwitter} /></a>
         <a href="https://www.instagram.com" aria-label="Instagram" className="topbar__icon"><FontAwesomeIcon icon={faInstagram} /></a>
-        <a href="https://www.linkedin.com" aria-label="LinkedIn" className="topbar__icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-        <a href="https://www.youtube.com" aria-label="YouTube" className="topbar__icon"><FontAwesomeIcon icon={faYoutube} /></a>
-      </div>
+        </div>
       <div className="d-flex align-items-center gap-2 topbar__contact">
         <span className="topbar__email-icon"><FontAwesomeIcon icon={faEnvelope} /></span>
         <a href="mailto:amayfoundation2023@gmail.com" className="topbar__email" style={{textDecoration: 'none', color: 'inherit'}}>amayfoundation2023@gmail.com</a>

@@ -102,12 +102,37 @@
   display: inline-block;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   border: none;
+  width: fit-content;
+  margin-top: 1rem;
 }
 
 .program-card-button:hover {
-  background-color: #f09819 !important;
+  background-color: rgb(237, 87, 87) !important;
   color: #fff !important;
   transform: translateY(-2px);
+}
+
+/* Outlined button for What We Do page sections */
+.whatwedo-readmore-btn {
+  background: transparent !important;
+  color: #ea321d !important;
+  border: 2px solid #ea321d !important;
+  border-radius: 50px !important;
+  padding: 0.7rem 2rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin-top: 1rem !important;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.2s !important;
+  box-shadow: none !important;
+  width: fit-content !important;
+}
+
+.whatwedo-readmore-btn:hover {
+  background: #ea321d !important;
+  color: #fff !important;
+  border-color: #ea321d !important;
+  transform: translateY(-2px) !important;
 }
 
 

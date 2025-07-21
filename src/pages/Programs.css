@@ -167,6 +167,10 @@
   box-shadow: 0 4px 16px rgba(29,44,170,0.13);
 }
 
+#capacity, #carbon, #livelihood, #cleanup, #treeplantation, #wastemanagement {
+  scroll-margin-top: 80px;
+}
+
 @media (max-width: 900px) {
   .whatwedo-section, .whatwedo-section.reverse {
     flex-direction: column !important;

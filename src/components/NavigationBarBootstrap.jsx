@@ -169,6 +169,52 @@ const NavigationBarBootstrap = () => {
             display: none !important;
           }
         }
+        .nav-dropdown-combo {
+          position: relative;
+        }
+        .nav-dropdown-combo .nav-link {
+          border: none;
+          background: none;
+          box-shadow: none;
+        }
+        .nav-dropdown-combo .dropdown-toggle {
+          border: none;
+          background: none;
+          box-shadow: none;
+        }
+        /* Hide Bootstrap's default caret for custom dropdowns */
+        .nav-dropdown-combo .dropdown-toggle::after {
+          display: none !important;
+        }
+        .nav-dropdown-combo::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          background: #ff6600;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+          transform-origin: center;
+        }
+        .nav-dropdown-combo:hover::after,
+        .nav-dropdown-combo:focus-within::after,
+        .nav-dropdown-combo .nav-link.active ~ .dropdown-toggle::after {
+          transform: scaleX(1);
+        }
+        .nav-dropdown-combo:hover .nav-link,
+        .nav-dropdown-combo:focus-within .nav-link,
+        .nav-dropdown-combo .nav-link.active {
+          color: #d35400 !important;
+        }
+        .nav-dropdown-combo .dropdown-toggle {
+          color: #ff6600 !important;
+        }
+        .nav-dropdown-combo:hover .dropdown-toggle,
+        .nav-dropdown-combo:focus-within .dropdown-toggle {
+          color: #d35400 !important;
+        }
       `}</style>
 
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top custom-navbar" style={{ zIndex: 1090, marginTop }}>
@@ -199,31 +245,48 @@ const NavigationBarBootstrap = () => {
                 <NavLink className="nav-link" to="/about" onClick={handleNavLinkClick}>About Us</NavLink>
               </li>
               <li className="nav-item dropdown">
-                <span
-                  className="nav-link dropdown-toggle d-flex align-items-center gap-1"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  onClick={handleDropdownToggle}
-                  aria-expanded={mobileDropdownOpen}
-                >
-                  What We Do <IoMdArrowDropdown className="dropdown-icon" style={{transform: mobileDropdownOpen ? 'rotate(180deg)' : undefined, transition: 'transform 0.3s'}} />
-                </span>
+                <div className="nav-dropdown-combo d-flex align-items-center position-relative">
+                  <NavLink
+                    className="nav-link d-flex align-items-center gap-1"
+                    to="/programs"
+                    onClick={handleNavLinkClick}
+                    style={{ cursor: 'pointer', border: 'none', background: 'none', boxShadow: 'none' }}
+                  >
+                    What We Do
+                  </NavLink>
+                  <span
+                    className="dropdown-toggle d-flex align-items-center gap-1"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    onClick={handleDropdownToggle}
+                    aria-expanded={mobileDropdownOpen}
+                    style={{ cursor: 'pointer', marginLeft: '-0.3rem', fontSize: '1.2em', background: 'none', border: 'none', boxShadow: 'none' }}
+                  >
+                    <IoMdArrowDropdown className="dropdown-icon" style={{transform: mobileDropdownOpen ? 'rotate(180deg)' : undefined, transition: 'transform 0.3s'}} />
+                  </span>
+                </div>
                 {/* Mobile dropdown (visible on small screens only) */}
                 <ul className={`mobile-dropdown dropdown-menu${mobileDropdownOpen ? ' open' : ''} d-lg-none`}
                   style={{ position: 'static', boxShadow: 'none', border: 'none', background: 'transparent', paddingLeft: 0 }}>
+                  <li><NavLink className="dropdown-item" to="/programs#capacity" onClick={handleNavLinkClick}>Capacity Building</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/programs#carbon" onClick={handleNavLinkClick}>Carbon Footprint</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/programs#livelihood" onClick={handleNavLinkClick}>Livelihood</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#cleanup" onClick={handleNavLinkClick}>Clean-Up Drives</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#treeplantation" onClick={handleNavLinkClick}>Tree Plantation</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#wastemanagement" onClick={handleNavLinkClick}>Waste Management</NavLink></li>
                 </ul>
                 {/* Desktop dropdown (visible on large screens only) */}
                 <ul className="dropdown-menu d-none d-lg-block">
+                  <li><NavLink className="dropdown-item" to="/programs#capacity" onClick={handleNavLinkClick}>Capacity Building</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/programs#carbon" onClick={handleNavLinkClick}>Carbon Footprint</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/programs#livelihood" onClick={handleNavLinkClick}>Livelihood</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#cleanup" onClick={handleNavLinkClick}>Clean-Up Drives</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#treeplantation" onClick={handleNavLinkClick}>Tree Plantation</NavLink></li>
                   <li><NavLink className="dropdown-item" to="/programs#wastemanagement" onClick={handleNavLinkClick}>Waste Management</NavLink></li>
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/gallery" onClick={handleNavLinkClick}>Gallery</NavLink>
+                <NavLink className="nav-link" to="/gallery" onClick={handleNavLinkClick}>Media Features</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/become-volunteer" onClick={handleNavLinkClick}>Volunteer</NavLink>
