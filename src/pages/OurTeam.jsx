@@ -23,25 +23,25 @@ const teamMembers = [
   },
   {
     name: 'Mr. Raheesh Prasad Patel',
-    designation: 'Operations Head',
+    designation: 'Co-Founder and Operations Head',
     bio: 'Mr. Raheesh oversees all our environmental projects, ensuring that our programs run smoothly and effectively on the ground.',
     image: raheeshPatel,
   },
   {
     name: 'Dr. Ashok Vishwakarma',
-    designation: 'Environmental Advisor',
+    designation: 'Secretary and Environmental Advisor',
     bio: 'Dr. Ashok brings years of experience in environmental policy and conservation to guide our initiatives.',
     image: drAshok,
   },
   {
     name: 'Mr. Dinesh Singh Yadav',
-    designation: 'Community Outreach Coordinator',
+    designation: 'Member and Community Outreach Coordinator',
     bio: 'Mr. Dinesh is the bridge between our foundation and the communities we serve, fostering trust and collaboration for a cleaner environment.',
     image: dineshYadav,
   },
   {
     name: 'Mr. Kamalesh Birla',
-    designation: 'Finance & Compliance Officer',
+    designation: '	Treasurer and Finance & Compliance Officer',
     bio: 'Mr. Kamalesh ensures our financial health and adherence to all regulations, maintaining our integrity and transparency.',
     image: kamaleshBirla,
   },
@@ -131,7 +131,7 @@ const OurTeam = () => {
             <p className="cta-text">
               Join our team and lend your skills to a cause that matters. Whether it's participating in clean-ups, planting trees, or spreading awareness, your time can help create a cleaner, greener world.
             </p>
-            <Link to="/become-volunteer" className="cta-button">Join Us</Link>
+            <Link to="/join-us" className="cta-button">Join Us</Link>
           </div>
         </motion.div>
       </motion.div>
