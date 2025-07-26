@@ -6,6 +6,7 @@ import './App.css';
 import { FaWhatsapp } from 'react-icons/fa';
 import Loading from './components/Loading';
 import NavigationBarBootstrap from './components/NavigationBarBootstrap.jsx';
+import Copyrights from './pages/Copyright.jsx';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
@@ -94,6 +95,7 @@ function App() {
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/donatenow" element={<DonateNow />} />
           <Route path="/join-us" element={<JoinUs />} />
+          <Route path="/copyrights" element={<Copyrights />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

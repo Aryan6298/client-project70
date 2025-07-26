@@ -1,7 +1,7 @@
 /* General Container for the Contact Page */
 .contact-page-container {
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
   justify-content: flex-start;
   position: relative;
   font-family: 'Open Sans', sans-serif;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 /* Dark overlay for better text readability */
@@ -204,5 +204,14 @@
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+  }
+ 
+  .contact-detail-link{
+    margin-left: -30px;
+
+  }
+  .contact-details-section{
+    margin-left: -20px;
+
   }
 } 

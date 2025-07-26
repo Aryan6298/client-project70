@@ -1,11 +1,12 @@
 import React from 'react';
 import img1 from '../assets/images/sponser01.png';
 import img2 from '../assets/images/sponser02.jpg';
-import img3 from '../assets/images/sponser03.png';
+import img3 from '../assets/images/sponser03.webp';
+import img4 from '../assets/images/sponser04.jpeg';
 import './PartnersSection.css';
 import { motion } from 'framer-motion';
 
-const partners = [img1, img2, img3];
+const partners = [img1, img2, img3,img4];
 
 const PartnersSection = () => {
   return (
@@ -19,8 +20,8 @@ const PartnersSection = () => {
         Our Partners & Supporters
       </motion.h2>
       <div className="partners-container">
-        <div className="partners-logos">
-          {partners.map((img, idx) => (
+      <div className="partners-logos">
+        {partners.map((img, idx) => (
             <motion.div 
               className="partner-logo-wrapper"
               key={idx}
@@ -40,7 +41,7 @@ const PartnersSection = () => {
                 transition={{ duration: 0.2 }}
               />
             </motion.div>
-          ))}
+        ))}
         </div>
       </div>
     </section>

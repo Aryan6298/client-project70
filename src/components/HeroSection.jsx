@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import './HeroSection.css';
-import heroBg1 from '../assets/images/crousal-img01.jpg';
-import heroBg2 from '../assets/images/crousal-img02.jpg';
-import heroBg3 from '../assets/images/crousal-img03.jpg';
-import heroBg4 from '../assets/images/crousal-img04.jpg';
+import heroBg1 from '../assets/images/crousal-img01.webp';
+import heroBg2 from '../assets/images/crousal-img02-gallery06.webp';
+import heroBg3 from '../assets/images/crousal-img03-gallery01.webp';
+import heroBg4 from '../assets/images/crousal-img04-gallery11.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+
+
 
 const slides = [
   {
@@ -47,6 +49,9 @@ const HeroSection = () => {
   const initialTimeoutRef = useRef(null);
   const initialOverlayTimeoutRef = useRef(null);
   const lightCoverTimeoutRef = useRef(null);
+  const preloadHeroImage = new Image();
+preloadHeroImage.src = heroBg1;
+
 
   // Initial overlay slides from right to left over white bg
   useEffect(() => {
@@ -97,7 +102,7 @@ const HeroSection = () => {
         setShowOverlay(false); // Hide overlay for next slide
         setCurrent((prev) => (prev + 1) % slides.length);
       }, 3000);
-    }, 1000);
+    }, 700);
   }, []);
 
   const nextSlide = useCallback(() => {

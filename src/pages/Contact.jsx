@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css';
-import backgroundImage from '../assets/images/crousal-img01.jpg';
+import backgroundImage from '../assets/images/crousal-img01.webp';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -81,7 +81,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           <motion.a 
-            href="https://www.facebook.com" 
+            href="https://www.facebook.com/profile.php?id=61578311296586" 
             aria-label="Facebook" 
             className="contact-social-icon"
             whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
@@ -89,17 +89,8 @@ const Contact = () => {
           >
             <FontAwesomeIcon icon={faFacebookF} />
           </motion.a>
-          <motion.a 
-            href="https://www.twitter.com" 
-            aria-label="Twitter" 
-            className="contact-social-icon"
-            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
-            transition={{ duration: 0.2 }}
-          >
-            <FontAwesomeIcon icon={faTwitter} />
-          </motion.a>
-          <motion.a 
-            href="https://www.instagram.com" 
+           <motion.a 
+            href="https://www.instagram.com/amayfoundation?utm_source=qr&igsh=MXZvbjY0ZnF5cGNiMQ==" 
             aria-label="Instagram" 
             className="contact-social-icon"
             whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
@@ -107,24 +98,7 @@ const Contact = () => {
           >
             <FontAwesomeIcon icon={faInstagram} />
           </motion.a>
-          <motion.a 
-            href="https://www.linkedin.com" 
-            aria-label="LinkedIn" 
-            className="contact-social-icon"
-            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
-            transition={{ duration: 0.2 }}
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </motion.a>
-          <motion.a 
-            href="https://www.youtube.com" 
-            aria-label="YouTube" 
-            className="contact-social-icon"
-            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
-            transition={{ duration: 0.2 }}
-          >
-            <FontAwesomeIcon icon={faYoutube} />
-          </motion.a>
+          
         </motion.div>
       </motion.div>
     </motion.div>

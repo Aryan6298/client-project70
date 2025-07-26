@@ -17,6 +17,7 @@
 .hero-slide {
   width: 25%;
   height: 100vh;
+  aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,26 +91,26 @@
   outline: none;
 }
 .hero__cta--primary {
-  background: #e74c3c;
+  background: #39b54a;
   color: #fff;
 }
 .hero__cta--primary:hover,
 .hero__cta--primary:focus {
-  background: #ff6600;
+  background: #39b54a;
   color: #fff;
   transform: scale(1.06);
   box-shadow: 0 4px 16px rgba(255,102,0,0.18);
 }
 .hero__cta--secondary {
   background: #fff;
-  color: #e74c3c;
-  border: 2px solid #e74c3c;
+  color: #39b54a;
+  border: 2px solid #39b54a;
 }
 .hero__cta--secondary:hover,
 .hero__cta--secondary:focus {
-  background: #ff6600;
+  background: #39b54a;
   color: #fff;
-  border-color: #ff6600;
+  border-color: #39b54a;
   transform: scale(1.06);
   box-shadow: 0 4px 16px rgba(255,102,0,0.18);
 }
@@ -133,7 +134,7 @@
   transition: background 0.3s;
 }
 .hero__arrow:hover {
-  background: #ff6600;
+  background: #39b54a;
 }
 .hero__arrow--left {
   left: 2rem;
@@ -165,7 +166,7 @@
   background: #fff;
 }
 .hero__dot--active {
-  background: #ff6600;
+  background: #39b54a;
   transform: scale(1.2);
 }
 

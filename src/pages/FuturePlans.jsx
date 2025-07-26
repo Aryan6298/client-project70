@@ -1,6 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaRegLightbulb } from 'react-icons/fa';
+import future01 from '../assets/images/future01.jpeg';
+import future02 from '../assets/images/future02.jpeg';
+import future03 from '../assets/images/future03.jpeg';
+import future04 from '../assets/images/future04.jpeg';
+import future05 from '../assets/images/future05.jpeg';
+import future06 from '../assets/images/future06.jpeg';
+import future07 from '../assets/images/future07.jpeg';
+import future08 from '../assets/images/future08.jpeg';
+import future09 from '../assets/images/future09.jpeg';
+import future10 from '../assets/images/future10.jpeg';
+import future11 from '../assets/images/future11.jpeg';
+import future12 from '../assets/images/future12.jpeg';
+import future13 from '../assets/images/future13.jpg';
+import future14 from '../assets/images/future14.jpeg';
+import future15 from '../assets/images/future15.jpeg';
+import future16 from '../assets/images/future16.jpeg';
+import future17 from '../assets/images/future17.jpeg';
+import future18 from '../assets/images/future18.jpeg';
+import future19 from '../assets/images/future19.jpeg';
+import future20 from '../assets/images/future20.jpeg';
+import future21 from '../assets/images/future21.jpeg';
+import future22 from '../assets/images/future22.jpeg';
+
+
+const planImages = [future01, future02, future03, future04, future05, future06, future07, future08, future09, future10, future11, future12, future13, future14, future15, future16, future17, future18, future19, future20, future21, future22];
 
 const futurePlans = [
   'Promote unity and harmony in society and organize events to resolve social conflicts.',
@@ -36,72 +61,106 @@ const FuturePlans = () => (
   <div style={{
     minHeight: '100vh',
     background: 'linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%)',
-    padding: 0,
-    margin: 0
+    fontFamily: `'Poppins', sans-serif`,
+    paddingTop: '5rem',
+    paddingBottom: '3rem'
   }}>
     <motion.div
-      style={{
-        marginTop: '80px',
-        maxWidth: 950,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        padding: '2.5rem 1.2rem 2.5rem 1.2rem',
-        background: 'rgba(255,255,255,0.97)',
-        borderRadius: 22,
-        boxShadow: '0 8px 32px rgba(29,44,170,0.10)',
-        position: 'relative',
-        overflow: 'hidden',
-        marginBottom: '2.5rem'
-      }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
+      style={{
+        maxWidth: 1000,
+        margin: '0 auto',
+        padding: '2.5rem 1.5rem',
+        background: 'rgba(255, 255, 255, 0.96)',
+        borderRadius: 22,
+        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}
     >
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.2rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <FaRegLightbulb size={48} color="#ffb300" style={{ marginBottom: '0.5rem', filter: 'drop-shadow(0 2px 8px #ffe082)' }} />
-        <h1 style={{ fontSize: '2.3rem', color: '#1D2BAA', fontWeight: 900, marginBottom: '0.5rem', letterSpacing: '1px', textAlign: 'center', fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif' }}>
-          Future Plans
+        <h1 style={{
+          fontSize: '2.5rem',
+          fontWeight: 800,
+          color: '#1D2BAA',
+          marginBottom: '0.3rem'
+        }}>
+          Our Future Plans
         </h1>
+        <p style={{
+          fontSize: '1.1rem',
+          color: '#444',
+          maxWidth: 700,
+          margin: '0 auto',
+          lineHeight: 1.7
+        }}>
+          We're working on a wide range of impactful goals designed to bring long-term change to communities across India.
+        </p>
       </div>
-      <p style={{ fontSize: '1.15rem', color: '#333', marginBottom: '2.2rem', textAlign: 'center', maxWidth: 700, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.7 }}>
-        Our vision for the future is guided by a comprehensive set of goals and objectives aimed at uplifting society, empowering individuals, and fostering sustainable development. Here are our key future plans:
-      </p>
-      <ol style={{ fontSize: '1.13rem', color: '#222', lineHeight: 1.8, paddingLeft: '1.2rem', maxWidth: 820, margin: '0 auto', fontFamily: 'Segoe UI, Arial, sans-serif' }}>
+
+      <ol style={{
+        paddingLeft: 0,
+        listStyle: 'none',
+        margin: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.4rem'
+      }}>
         {futurePlans.map((plan, idx) => (
           <motion.li
             key={idx}
             custom={idx}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.6 }}
             variants={fadeUp}
             style={{
-              marginBottom: '1.1rem',
-              paddingLeft: '0.2rem',
-              background: idx % 2 === 0 ? 'rgba(29,44,170,0.04)' : 'rgba(255,179,0,0.06)',
-              borderRadius: 8,
-              padding: '0.7rem 1rem',
-              boxShadow: idx % 2 === 0 ? '0 2px 8px rgba(29,44,170,0.04)' : '0 2px 8px rgba(255,179,0,0.06)',
-              fontWeight: 500,
-              color: '#1D2BAA',
-              borderLeft: idx % 2 === 0 ? '4px solid #1D2BAA' : '4px solid #ffb300',
-              fontSize: '1.08rem',
-              letterSpacing: '0.01em',
+              background: '#fff',
               display: 'flex',
               alignItems: 'flex-start',
-              gap: '0.7rem'
+              gap: '1rem',
+              borderLeft: `6px solid ${idx % 2 === 0 ? '#1D2BAA' : '#ffb300'}`,
+              borderRadius: 16,
+              padding: '1.1rem 1.4rem',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
+              transition: 'transform 0.2s ease',
+              minHeight: 90
             }}
+            whileHover={{ scale: 1.015 }}
           >
-            <span style={{
-              fontWeight: 800,
-              color: idx % 2 === 0 ? '#1D2BAA' : '#ffb300',
-              fontSize: '1.13rem',
-              minWidth: 28,
-              display: 'inline-block',
-              textAlign: 'right',
-              marginRight: 8
-            }}>{idx + 1}.</span>
-            <span style={{ color: '#222', fontWeight: 500 }}>{plan}</span>
+            <img
+              src={planImages[idx]}
+              alt={`Future Plan ${idx + 1}`}
+              style={{
+                width: 70,
+                height: 70,
+                objectFit: 'cover',
+                borderRadius: 12,
+                flexShrink: 0,
+                boxShadow: '0 3px 8px rgba(0,0,0,0.1)'
+              }}
+            />
+            <div>
+              <span style={{
+                fontSize: '1rem',
+                fontWeight: 700,
+                color: idx % 2 === 0 ? '#1D2BAA' : '#ffb300'
+              }}>
+                {idx + 1}.
+              </span>
+              <p style={{
+                marginTop: 4,
+                color: '#222',
+                fontSize: '1rem',
+                fontWeight: 500,
+                lineHeight: 1.6
+              }}>
+                {plan}
+              </p>
+            </div>
           </motion.li>
         ))}
       </ol>
@@ -109,4 +168,4 @@ const FuturePlans = () => (
   </div>
 );
 
-export default FuturePlans; 
+export default FuturePlans;

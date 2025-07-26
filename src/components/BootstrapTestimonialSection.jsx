@@ -57,11 +57,11 @@ const BootstrapTestimonialSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <style>{`
+    <style>{`
       .testimonial-section {
         background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
         backdrop-filter: blur(10px);
-        border-top: 4px solid #ff6600;
+        border-top: 4px solid #39b54a;
       }
       
       .testimonial-initials {
@@ -74,7 +74,7 @@ const BootstrapTestimonialSection = () => {
         font-size: 22px;
         font-weight: bold;
         color: white;
-        background: linear-gradient(135deg, #ff6600, #ff8533);
+        background: linear-gradient(135deg, #39b54a, #39b54a);
         box-shadow: 0 8px 24px rgba(255, 102, 0, 0.2);
         position: relative;
         z-index: 1;
@@ -104,7 +104,7 @@ const BootstrapTestimonialSection = () => {
       }
 
       .testimonial-role {
-        color: #ff6600;
+        color: #39b54a;
         font-size: 0.9rem;
         font-weight: 500;
       }
@@ -120,7 +120,7 @@ const BootstrapTestimonialSection = () => {
         opacity: 1;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         margin: 0 -20px;
-        border: 2px solid #ff6600;
+        border: 2px solid #39b54a;
       }
 
       .carousel-control-prev:hover,
@@ -134,7 +134,7 @@ const BootstrapTestimonialSection = () => {
       }
 
       .review-btn {
-        background: linear-gradient(135deg, #ff6600, #ff8533);
+        background: linear-gradient(135deg, #39b54a, #39b54a);
         border: none;
         padding: 0.8rem 2rem;
         font-weight: 600;
@@ -145,7 +145,7 @@ const BootstrapTestimonialSection = () => {
       .review-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(255, 102, 0, 0.2);
-        background: linear-gradient(135deg, #ff8533, #ff6600);
+        background: linear-gradient(135deg, #39b54a, #39b54a);
       }
 
       .section-title {
@@ -166,7 +166,7 @@ const BootstrapTestimonialSection = () => {
         transform: translateX(-50%);
         width: 100px;
         height: 3px;
-        background: #ff6600;
+        background: #39b54a;
         border-radius: 2px;
       }
 
@@ -216,38 +216,38 @@ const BootstrapTestimonialSection = () => {
           data-bs-ride="carousel"
           data-bs-interval="4000"
         >
-          <div className="carousel-inner">
-            {testimonials.map((t, i) => (
-              <div className={`carousel-item${i === 0 ? ' active' : ''}`} key={i}>
-                <div className="d-flex flex-column align-items-center">
+        <div className="carousel-inner">
+          {testimonials.map((t, i) => (
+            <div className={`carousel-item${i === 0 ? ' active' : ''}`} key={i}>
+              <div className="d-flex flex-column align-items-center">
                   <motion.div 
                     className="testimonial-initials mb-4"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    {t.initials}
+                  {t.initials}
                   </motion.div>
                   <div className="position-relative mb-4">
                     <FaQuoteLeft className="quote-icon" />
                     <blockquote className="testimonial-quote text-center px-md-4">
                       {t.quote}
-                    </blockquote>
+                </blockquote>
                   </div>
                   <p className="testimonial-name mb-1">{t.name}</p>
                   <p className="testimonial-role mb-0">{t.role}</p>
-                </div>
               </div>
-            ))}
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+            </div>
+          ))}
         </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
         <motion.div 
           className="text-center mt-5"
           initial={{ opacity: 0, y: 20 }}
@@ -256,18 +256,18 @@ const BootstrapTestimonialSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="mb-3" style={{ color: '#666' }}>Loved our work? Share your experience and help others discover us!</p>
-          <a
-            href="https://www.google.com/search?q=amay+foundation+reviews"
-            target="_blank"
-            rel="noopener noreferrer"
+        <a
+          href="https://www.google.com/search?sca_esv=bff55ff221f7a59a&biw=1396&bih=632&sxsrf=AE3TifPso3Mda9PHE14ZW9_ou2PcoaG3TQ:1753514702747&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E3nuWSPb10Hd8R-qRITjbkkvXFVHQu7onSQlvT7wpuvhDGBoUKWKOG-y61JJygfWEqOjdpeWJxqmeK6hxQeqJ9bL5Y9T&q=Amay+Foundation+Reviews&sa=X&ved=2ahUKEwjOxtyn_9mOAxWVUGwGHYOOPcQQ0bkNegQIHRAD"
+          target="_blank"
+          rel="noopener noreferrer"
             className="btn review-btn text-white"
-          >
-            Leave a Google Review
-          </a>
+        >
+          Leave your Review
+        </a>
         </motion.div>
       </motion.div>
     </motion.section>
-  );
+);
 };
 
 export default BootstrapTestimonialSection; 

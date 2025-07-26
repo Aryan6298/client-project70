@@ -11,7 +11,7 @@
 
 .donate-now-heading {
   font-size: 2.5rem;
-  color: #ff6600;
+  color: #1D2BAA;
   margin-bottom: 1.2rem;
   font-weight: bold;
 }
@@ -77,7 +77,7 @@
 
 .donate-now-btn {
   display: inline-block;
-  background: #4a90e2;
+  background: #39b54a;
   color: #fff;
   font-size: 1.18rem;
   font-weight: 700;
@@ -85,26 +85,63 @@
   padding: 1rem 2.8rem;
   text-decoration: none;
   margin-top: 0.7rem;
-  box-shadow: 0 2px 8px rgba(74,144,226,0.13);
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(57,181,74,0.13);
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 1px;
 }
 
 .donate-now-btn:hover {
-  background: #2d6bb3;
+  background: #2e8c3a;
   color: #fff;
   transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(57,181,74,0.18);
+}
+
+.donate-now-bank {
+  margin-top: 2rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 1.8rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.bank-transfer-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1D2BAA;
+  border-bottom: 2px solid #d11a2a;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.bank-transfer-heading span {
+  color: #333;
+  font-weight: normal;
 }
 
 @media (max-width: 700px) {
   .donate-now-page {
     padding: 1.2rem 0.5rem 1.2rem 0.5rem;
   }
+
   .donate-now-details {
     flex-direction: column;
     gap: 1.2rem;
   }
+
   .donate-now-qr img {
     width: 120px;
     height: 120px;
   }
-} 
+
+  .donate-now-bank {
+    font-size: 0.95rem;
+    padding: 1.5rem 1rem;
+  }
+  .donate-now-btn{
+    
+  }
+}

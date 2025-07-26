@@ -29,7 +29,7 @@ body, .about-main {
 }
 
 .about-detailed__content h1 {
-  color: #ff6600;
+  color: #39b54a;
   margin-bottom: 1.2rem;
   font-size: 2.5rem;
   font-weight: 800;
@@ -56,11 +56,11 @@ body, .about-main {
   flex: 1;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   position: relative;
-  border-left: 6px solid #ff6600;
+  border-left: 6px solid #39b54a;
 }
 
 .vision-block h2, .mission-block h2 {
-  color: #ff6600;
+  color: #39b54a;
   margin-bottom: 0.7rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -88,12 +88,12 @@ body, .about-main {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #ff6600;
+  border: 4px solid #39b54a;
   box-shadow: 0 2px 12px rgba(255,102,0,0.10);
 }
 
 .founder-content h2 {
-  color: #ff6600;
+  color: #39b54a;
   margin-bottom: 0.7rem;
   font-size: 1.4rem;
   font-weight: 700;
@@ -107,7 +107,7 @@ body, .about-main {
 }
 
 .founder-name {
-  color: #ff6600;
+  color: #39b54a;
   font-weight: bold;
   margin-top: 1rem;
   font-size: 1.1rem;
@@ -136,7 +136,7 @@ body, .about-main {
 }
 
 .about-registration__content h2 {
-  color: #ff6600;
+  color: #39b54a;
   margin-bottom: 1.2rem;
   font-size: 2rem;
   font-weight: 800;

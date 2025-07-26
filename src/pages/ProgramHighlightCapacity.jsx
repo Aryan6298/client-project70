@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import digiLibraryImg from '../assets/images/capacity-building01.jpg';
+import digiLibraryImg from '../assets/images/capacity-building01.webp';
 
 const ProgramHighlightCapacity = () => (
   <motion.div

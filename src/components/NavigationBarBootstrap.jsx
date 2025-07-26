@@ -69,7 +69,7 @@ const NavigationBarBootstrap = () => {
 
         .custom-navbar .nav-link {
           font-weight: 500;
-          color: #ff6600 !important;
+          color: #39b54a !important;
           position: relative;
           font-size: 1.15rem;
           transition: color 0.2s;
@@ -80,7 +80,7 @@ const NavigationBarBootstrap = () => {
           position: absolute;
           width: 100%;
           height: 2px;
-          background: #ff6600;
+          background: #39b54a;
           left: 0;
           bottom: 0;
           transform: scaleX(0);
@@ -94,7 +94,7 @@ const NavigationBarBootstrap = () => {
         }
 
         .custom-navbar .nav-link:hover {
-          color: #d35400 !important;
+          color: #2e8c3a !important;
         }
 
         .custom-navbar .dropdown-menu {
@@ -114,13 +114,13 @@ const NavigationBarBootstrap = () => {
         }
 
         .custom-navbar .dropdown-item:hover {
-          background: #fff7f2;
-          color: #d35400;
+          background: #eafbe7;
+          color: #2e8c3a;
           font-weight: 600;
         }
 
         .donate-btn {
-          background-color: #ef301b;
+          background-color:rgb(18, 52, 222);
           color: white !important;
           border-radius: 1.75rem;
           font-weight: bold;
@@ -131,7 +131,7 @@ const NavigationBarBootstrap = () => {
         }
 
         .donate-btn:hover {
-          background-color: #ff6600;
+          background-color:rgb(34, 19, 112);
           transform: scale(1.05);
           box-shadow: 0 0.25rem 1rem rgba(255, 102, 0, 0.18);
         }
@@ -190,7 +190,7 @@ const NavigationBarBootstrap = () => {
           right: 0;
           bottom: 0;
           height: 2px;
-          background: #ff6600;
+          background: #39b54a;
           transform: scaleX(0);
           transition: transform 0.3s ease;
           transform-origin: center;
@@ -203,14 +203,14 @@ const NavigationBarBootstrap = () => {
         .nav-dropdown-combo:hover .nav-link,
         .nav-dropdown-combo:focus-within .nav-link,
         .nav-dropdown-combo .nav-link.active {
-          color: #d35400 !important;
+          
         }
         .nav-dropdown-combo .dropdown-toggle {
-          color: #ff6600 !important;
+          color: green !important;
         }
         .nav-dropdown-combo:hover .dropdown-toggle,
         .nav-dropdown-combo:focus-within .dropdown-toggle {
-          color: #d35400 !important;
+          color: green !important;
         }
       `}</style>
 
@@ -253,10 +253,10 @@ const NavigationBarBootstrap = () => {
                     onClick={(e) => {
                       if (window.innerWidth < 992) {
                         e.preventDefault();
-                        setMobileDropdownOpen(!mobileDropdownOpen);
+                            setMobileDropdownOpen(!mobileDropdownOpen);
                       } else {
                         handleNavLinkClick();
-                        setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+                      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
                       }
                     }}
                     style={{ cursor: 'pointer', border: 'none', background: 'none', boxShadow: 'none' }}
@@ -264,7 +264,7 @@ const NavigationBarBootstrap = () => {
                     What We Do
                   </NavLink>
                   <span
-                    className="dropdown-toggle d-flex align-items-center gap-1"
+                    className="dropdown-toggle d-flex align-items-center gap-1 "
                     role="button"
                     data-bs-toggle="dropdown"
                     onClick={handleDropdownToggle}
@@ -274,6 +274,7 @@ const NavigationBarBootstrap = () => {
                     <IoMdArrowDropdown 
                       className="dropdown-icon" 
                       style={{
+                        color:' #39b54a',
                         transform: mobileDropdownOpen ? 'rotate(180deg)' : undefined,
                         transition: 'transform 0.3s ease'
                       }} 

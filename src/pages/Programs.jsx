@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import studyMallImg from '../assets/images/gallery06.jpg';
+import studyMallImg from '../assets/images/crousal-img02-gallery06.webp';
 import studyFinImg from '../assets/images/sapling.jpg';
-import digiLibraryImg from '../assets/images/gallery12.jpg';
+import digiLibraryImg from '../assets/images/gallery12.webp';
 import homeStudyMallImg from '../assets/images/livelyhood01.jpg';
 import homeStudyFinImg from '../assets/images/sapling.jpg';
-import homeDigiLibraryImg from '../assets/images/capacity-building01.jpg';
-import gallery01 from '../assets/images/gallery01.jpg';
-import gallery02 from '../assets/images/gallery02.jpg';
+import homeDigiLibraryImg from '../assets/images/capacity-building01.webp';
+import gallery01 from '../assets/images/crousal-img03-gallery01.webp';
+import gallery02 from '../assets/images/gallery02.webp';
 import newspaper01 from '../assets/images/newspaper01.jpg';
-import gallery04 from '../assets/images/gallery04.jpg';
-import gallery05 from '../assets/images/gallery05.jpg';
-import gallery07 from '../assets/images/gallery07.jpg';
-import gallery09 from '../assets/images/gallery09.jpg';
-import gallery10 from '../assets/images/gallery10.jpg';
-import gallery11 from '../assets/images/gallery11.jpg';
-import gallery13 from '../assets/images/gallery13.jpg';
-import gallery14 from '../assets/images/gallery14.jpg';
-import gallery15 from '../assets/images/gallery15.jpg';
-import gallery16 from '../assets/images/gallery16.jpg';
+import gallery04 from '../assets/images/gallery04.webp';
+import gallery05 from '../assets/images/gallery05.webp';
+import gallery07 from '../assets/images/gallery07.webp';
+import gallery09 from '../assets/images/gallery09 (1).webp';
+import gallery10 from '../assets/images/gallery10.webp';
+import gallery11 from '../assets/images/crousal-img04-gallery11.webp';
+import gallery13 from '../assets/images/gallery13.webp';
+import gallery14 from '../assets/images/gallery14.webp';
+import gallery15 from '../assets/images/gallery15.webp';
+import gallery16 from '../assets/images/gallery16.webp';
 import './Programs.css';
 
 const programs = [
@@ -160,7 +160,7 @@ const Programs = () => {
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
             >
               <motion.div className="whatwedo-img-wrap"
                 initial={{ y: 40, opacity: 0 }}

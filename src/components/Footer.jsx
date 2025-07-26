@@ -32,33 +32,9 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0 }}
         >
           <div className="footer__logo">Amay Foundation</div>
-          <p>We are dedicated to saving and cleaning the environment.<br />Join us in creating a cleaner, greener, and healthier planet for all.</p>
+          <p>Amay Foundation is a youth-led non-profit working to uplift underprivileged communities through education, empowerment, and sustainable efforts. Guided by our Sanskrit motto "शुद्धचेतने सेवा यत्र, तत्र कल्याणम्" — "Where service is done with pure consciousness, there lies true welfare" — we believe in creating positive change with sincerity, compassion, and purpose.</p>
         </motion.div>
-        <motion.div className="footer__col"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h4>Quick Links</h4>
-          <ul>
-            <li><Link to="/" onClick={handleScrollToTop}>Home</Link></li>
-            <li><Link to="/about" onClick={handleScrollToTop}>About Us</Link></li>
-            <li>
-              <Link 
-                to="/programs" 
-                onClick={handleScrollToTop}
-              >
-                What We Do
-              </Link>
-            </li>
-            <li><Link to="/our-team" onClick={handleScrollToTop}>Our Team</Link></li>
-            <li><Link to="/join-us" onClick={handleScrollToTop}>Join Us</Link></li>
-            <li><Link to="/gallery" onClick={handleScrollToTop}>Media Features</Link></li>
-            <li><Link to="/future-plans" onClick={handleScrollToTop}>Future Plans</Link></li>
-            <li><Link to="/contact" onClick={handleScrollToTop}>Contact Us</Link></li>
-          </ul>
-        </motion.div>
+        
         <motion.div className="footer__col footer__contact" 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,15 +43,12 @@ const Footer = () => {
         >
           <h4>Contact Us</h4>
           <p><span className="footer__icon">📞</span> <a href="tel:+918889583332" style={{textDecoration: 'none', color: 'inherit'}}>+91 88895-83332</a></p>
-          <p><span className="footer__icon">📞</span> <a href="tel:+918982949153" style={{textDecoration: 'none', color: 'inherit'}}>+91 8982949153</a></p>
-          <p><span className="footer__icon">✉️</span> <a href="mailto:amayfoundation2023@gmail.com">amayfoundation2023@gmail.com</a></p>
+          <p><span className="footer__icon">📞</span> <a href="tel:+918982949153" style={{textDecoration: 'none', color: 'inherit'}}>+91 89829-49153</a></p>
+          <p><span className="footer__icon">✉</span> <a href="mailto:amayfoundation2023@gmail.com"  style={{textDecoration: 'none', color: 'white'}} >amayfoundation2023@gmail.com</a></p>
           
           <div className="footer-social-links">
-            <a href="https://www.facebook.com" aria-label="Facebook" className="footer-social-icon"><FontAwesomeIcon icon={faFacebookF} /></a>
-            <a href="https://www.twitter.com" aria-label="Twitter" className="footer-social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
-            <a href="https://www.instagram.com" aria-label="Instagram" className="footer-social-icon"><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href="https://www.linkedin.com" aria-label="LinkedIn" className="footer-social-icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-            <a href="https://www.youtube.com" aria-label="YouTube" className="footer-social-icon"><FontAwesomeIcon icon={faYoutube} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61578311296586" aria-label="Facebook" className="footer-social-icon"><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a href="https://www.instagram.com/amayfoundation?utm_source=qr&igsh=MXZvbjY0ZnF5cGNiMQ==" aria-label="Instagram" className="footer-social-icon"><FontAwesomeIcon icon={faInstagram} /></a>
           </div>
         </motion.div>
         <motion.div className="footer__col footer__address"
@@ -109,13 +82,17 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-      <motion.div className="footer__bottom"
+      <motion.div className="footer__bottom" 
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <span>Copyright ©2021. All Rights Reserved | Amay Foundation</span>
+        <span>
+  © {new Date().getFullYear()} Amay Foundation. All Rights Reserved |{' '}
+  <Link to="/copyrights" className="footer__bottom-link">Copyright Notice</Link>
+</span>
+
       </motion.div>
     </motion.footer>
   );

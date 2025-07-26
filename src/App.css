@@ -49,24 +49,24 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   font-weight: bold;
-  color: #ff6600;
+  color: #39b54a;
   margin-top: 0;
 }
 
 a {
-  color: #ff6600;
+  color: #39b54a;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: #e65c00;
+  color: #2e8c3a;
 }
 
 button, .hero__cta, .about-section__cta, .contact-form button {
   border: none;
   border-radius: 30px;
-  background: #ff6600;
+  background: #39b54a;
   color: #fff;
   font-weight: bold;
   padding: 0.7rem 1.5rem;
@@ -75,7 +75,7 @@ button, .hero__cta, .about-section__cta, .contact-form button {
 }
 
 button:hover, .hero__cta:hover, .about-section__cta:hover, .contact-form button:hover {
-  background: #e65c00;
+  background: #2e8c3a;
 }
 
 section {
@@ -87,7 +87,7 @@ section {
   background: #fff7f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff6600;
+  background: #39b54a;
   border-radius: 8px;
 }
 

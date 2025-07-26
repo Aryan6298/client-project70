@@ -4,7 +4,7 @@ import './ProgramHighlight.css';
 
 import studyMallImg from '../assets/images/livelyhood01.jpg';
 import studyFinImg from '../assets/images/sapling.jpg';
-import digiLibraryImg from '../assets/images/capacity-building01.jpg';
+import digiLibraryImg from '../assets/images/capacity-building01.webp';
 
 const programs = [
   {
