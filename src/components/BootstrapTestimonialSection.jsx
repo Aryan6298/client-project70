@@ -134,7 +134,7 @@ const BootstrapTestimonialSection = () => {
       }
 
       .review-btn {
-        background: linear-gradient(135deg, #39b54a, #39b54a);
+        background: rgba(0, 47, 45, 0.978);
         border: none;
         padding: 0.8rem 2rem;
         font-weight: 600;

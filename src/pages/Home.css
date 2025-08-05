@@ -186,7 +186,7 @@ footer, .footer {
 }
 
 .volunteer-cta-section {
-  background: #39b54a;
+  background: rgba(0, 47, 45, 0.978);
   color: #fff;
   text-align: center;
   padding: 3.5rem 0 3.5rem 0;
@@ -207,7 +207,7 @@ footer, .footer {
 .volunteer-cta-button {
   display: inline-block;
   background: #fff;
-  color: #39b54a;
+  color: rgba(0, 47, 45, 0.978);
   font-size: 1.2rem;
   font-weight: 600;
   border-radius: 2.5rem;
