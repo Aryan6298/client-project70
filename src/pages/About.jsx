@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutImg from '../assets/images/logo-amay.png';
-import founderImg from '../assets/images/team-img01-rachna-shukla.png';
+import founderImg1 from '../assets/images/team-img01-rachna-shukla.png';
+import founderImg2 from '../assets/images/team-img03-drashok-vishwakarma.png'; // Add the second image here
 import registrationImg from '../assets/images/registration-amay.png';
 import './About.css';
 import { motion } from 'framer-motion';
@@ -65,24 +66,34 @@ const About = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6 }}
       >
-        <motion.div className="founder-img"
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-        >
-          <img src={founderImg} alt="Founder's Message" loading="lazy" />
-        </motion.div>
-        <motion.div className="founder-content"
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h2>Founder's Message</h2>
-          <p>
-            "Amay Foundation began with a passion for making a real difference in our environment. We believe that every small action counts, and together, we can create a lasting impact. Thank you to everyone who supports our mission. We look forward to expanding our work to many more causes in the future."
-          </p>
-          <p className="founder-name">Rachna Shukla</p>
-        </motion.div>
+        <h2>Founders' Message</h2>
+        <div className="founders-container">
+          <motion.div className="founder-block"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img src={founderImg1} alt="Rachna Shukla" loading="lazy" />
+            <div className="founder-content">
+              <p>
+                "Amay Foundation began with a passion for making a real difference in our environment. We believe that every small action counts, and together, we can create a lasting impact. Thank you to everyone who supports our mission."
+              </p>
+              <p className="founder-name">Rachna Shukla</p>
+            </div>
+          </motion.div>
+
+          <motion.div className="founder-block"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img src={founderImg2} alt="Amit Shukla" loading="lazy" />
+            <div className="founder-content">
+              <p>
+                "With growing environmental challenges, it’s essential we act now. At Amay Foundation, we are working toward scalable, community-led solutions to help preserve nature for future generations."
+              </p>
+              <p className="founder-name">Amit Shukla</p>
+            </div>
+          </motion.div>
+        </div>
       </motion.section>
 
       <motion.section className="about-registration"
@@ -113,4 +124,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;

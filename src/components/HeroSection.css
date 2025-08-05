@@ -91,7 +91,7 @@
   outline: none;
 }
 .hero__cta--primary {
-  background: #39b54a;
+  background: rgba(0, 47, 45, 0.978);
   color: #fff;
 }
 .hero__cta--primary:hover,
@@ -103,8 +103,8 @@
 }
 .hero__cta--secondary {
   background: #fff;
-  color: #39b54a;
-  border: 2px solid #39b54a;
+  color: rgba(0, 47, 45, 0.978);
+  border: 2px solid rgba(0, 47, 45, 0.978);
 }
 .hero__cta--secondary:hover,
 .hero__cta--secondary:focus {
@@ -134,7 +134,7 @@
   transition: background 0.3s;
 }
 .hero__arrow:hover {
-  background: #39b54a;
+  background: rgba(0, 47, 45, 0.978);
 }
 .hero__arrow--left {
   left: 2rem;

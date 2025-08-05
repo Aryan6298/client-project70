@@ -58,16 +58,22 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* ✅ Updated to prevent image cropping */
 .team-card__image-container {
   width: 100%;
   height: 250px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
 .team-card__image {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.3s;
 }
 
@@ -99,7 +105,31 @@
   line-height: 1.5;
 }
 
-/* CTA Sections from Volunteer.css */
+/* 🔧 Technical Team Section */
+.technical-team-section {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.technical-team-title {
+  font-size: 2rem;
+  color: #1D2BAA;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.technical-team-title::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  width: 60px;
+  height: 4px;
+  background: #39b54a;
+  border-radius: 3px;
+}
+
+/* CTA Sections */
 .cta-section-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -148,7 +178,7 @@
 }
 
 .cta-button {
-  background-color: #39b54a;
+  background-color:rgba(0, 47, 45, 0.978);
   color: #fff;
   border: none;
   padding: 1rem 2.5rem;
@@ -159,7 +189,7 @@
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(57,181,74,0.10);
+  box-shadow: 0 2px 8px rgba(57, 181, 74, 0.10);
   margin-top: 1.2rem;
 }
 
@@ -167,5 +197,5 @@
   background-color: #2e8c3a;
   color: #fff;
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 6px 18px rgba(57,181,74,0.18);
-} 
+  box-shadow: 0 6px 18px rgba(57, 181, 74, 0.18);
+}

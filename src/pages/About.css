@@ -72,24 +72,40 @@ body, .about-main {
   margin: 0;
 }
 
+/* 🔄 Updated section for multiple founders */
 .founder-message {
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
   background: linear-gradient(135deg, #fff7f0 0%, #ffe0cc 100%);
   border-radius: 20px;
   padding: 2.5rem 2rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   margin-bottom: 2rem;
+  flex-direction: column;
 }
 
-.founder-img img {
+.founders-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.founder-block {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.founder-block img {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #39b54a;
   box-shadow: 0 2px 12px rgba(255,102,0,0.10);
+  margin-bottom: 1rem;
 }
 
 .founder-content h2 {
@@ -149,28 +165,37 @@ body, .about-main {
   line-height: 1.7;
 }
 
+/* 🔄 Responsive Design */
 @media (max-width: 900px) {
-  .about-detailed, .founder-message, .vision-mission {
+  .about-detailed, .vision-mission, .about-registration {
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
     padding: 1.5rem 0.7rem;
   }
-  .about-detailed__img img, .founder-img img {
-    width: 100%;
-    max-width: 320px;
-  }
-  .vision-block, .mission-block {
-    padding: 1.5rem 1rem 1.5rem 0.7rem;
-  }
-  .about-registration {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
-    padding: 1.5rem 0.7rem;
-  }
+
+  .about-detailed__img img,
   .about-registration__img img {
     width: 100%;
     max-width: 320px;
   }
-} 
+
+  .vision-block, .mission-block {
+    padding: 1.5rem 1rem 1.5rem 0.7rem;
+  }
+
+  .founders-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .founder-block {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .founder-block img {
+    width: 120px;
+    height: 120px;
+  }
+}

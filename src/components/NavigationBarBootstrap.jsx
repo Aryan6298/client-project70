@@ -69,7 +69,7 @@ const NavigationBarBootstrap = () => {
 
         .custom-navbar .nav-link {
           font-weight: 500;
-          color: #39b54a !important;
+          color:rgba(0, 47, 45, 0.978) !important;
           position: relative;
           font-size: 1.15rem;
           transition: color 0.2s;

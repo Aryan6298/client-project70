@@ -7,6 +7,7 @@ import AboutSection from '../components/AboutSection';
 import BootstrapTestimonialSection from '../components/BootstrapTestimonialSection';
 import PartnersSection from '../components/PartnersSection';
 import GalleryCarousel from '../components/GalleryCarousel';
+
 import './Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

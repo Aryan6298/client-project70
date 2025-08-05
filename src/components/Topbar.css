@@ -1,6 +1,6 @@
 .topbar {
   width: 100%;
-  background: #39b54a;
+  background: rgba(0, 47, 45, 0.978);
   color: #fff;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
   color: #fff;
   font-size: 1.15rem;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,9 +40,30 @@
   background: transparent;
 }
 
-.topbar__icon:hover {
-  color: #39b54a;
-  background: #fff;
+/* Brand-specific hover styles */
+.topbar__icon.facebook:hover {
+  color: #1877f2; /* Facebook Blue */
+  background-color: #fff;
+}
+
+.topbar__icon.instagram:hover {
+  color: #e1306c; /* Instagram Pink */
+  background-color: #fff;
+}
+
+.topbar__icon.twitter:hover {
+  color: #1da1f2; /* Twitter Blue */
+  background-color: #fff;
+}
+
+.topbar__icon.linkedin:hover {
+  color: #0077b5; /* LinkedIn Blue */
+  background-color: #fff;
+}
+
+.topbar__icon.youtube:hover {
+  color: #ff0000; /* YouTube Red */
+  background-color: #fff;
 }
 
 .topbar__contact {
@@ -67,5 +88,3 @@
   display: inline-block;
   text-align: left;
 }
-
-
