@@ -87,7 +87,7 @@ section {
   background: #fff7f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #39b54a;
+  background:  rgba(0, 47, 45, 0.978);
   border-radius: 8px;
 }
 
@@ -115,6 +115,6 @@ section {
 .floating-whatsapp-btn:hover {
   background: #128c7e;
   transform: scale(1.08);
-  box-shadow: 0 8px 32px rgba(37,211,102,0.18);
+  box-shadow: 0 8px 32px rgba(37, 211, 51, 0.18);
   color: #fff;
 }

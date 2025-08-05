@@ -25,8 +25,8 @@ const ProgramHighlightCapacity = () => (
     </ul>
     <h3 style={{color: '#ff6600', textAlign: 'left', fontSize: '1.35rem'}}>🎯 Our Impact:</h3>
     <ul style={{textAlign: 'left', fontSize: '1.18rem', margin: '1.2rem 0 2.2rem 2.2rem', lineHeight: 1.7}}>
-      <li>Over <b>[insert number]</b> individuals and organizations trained in key skills.</li>
-      <li><b>[Insert number]%</b> increase in project success rates among trained groups.</li>
+      <li>Over <b>50+</b> individuals and organizations trained in key skills.</li>
+      <li><b>20%</b> increase in project success rates among trained groups.</li>
       <li>Stronger, more resilient community organizations able to sustain their own initiatives.</li>
     </ul>
     <h3 style={{color: '#ff6600', textAlign: 'left', fontSize: '1.35rem'}}>🌍 Why It Matters:</h3>

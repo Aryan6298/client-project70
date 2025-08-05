@@ -36,7 +36,7 @@ function ScrollToTop() {
 function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/8889583332"
+      href="https://wa.me/+918889583332"
       target="_blank"
       rel="noopener noreferrer"
       className="floating-whatsapp-btn"

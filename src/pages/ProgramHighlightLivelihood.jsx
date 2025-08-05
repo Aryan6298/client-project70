@@ -25,8 +25,8 @@ const ProgramHighlightLivelihood = () => (
     </ul>
     <h3 style={{color: '#ff6600', textAlign: 'left', fontSize: '1.35rem'}}>🎯 Our Impact:</h3>
     <ul style={{textAlign: 'left', fontSize: '1.18rem', margin: '1.2rem 0 2.2rem 2.2rem', lineHeight: 1.7}}>
-      <li>Over <b>[insert number]</b> individuals trained across rural and urban regions.</li>
-      <li><b>[Insert number]</b>% increase in household income for participants after 6 months.</li>
+      <li>Over <b>100+</b> individuals trained across rural and urban regions.</li>
+      <li><b>10</b>% increase in household income for participants after 6 months.</li>
       <li>Self-help groups formed to ensure long-term support and collective growth.</li>
     </ul>
     <h3 style={{color: '#ff6600', textAlign: 'left', fontSize: '1.35rem'}}>🌍 Why It Matters:</h3>

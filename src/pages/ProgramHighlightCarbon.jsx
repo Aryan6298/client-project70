@@ -25,8 +25,8 @@ const ProgramHighlightCarbon = () => (
     </ul>
     <h3 style={{color: '#ff6600', textAlign: 'left', fontSize: '1.35rem'}}>🎯 Our Impact:</h3>
     <ul style={{textAlign: 'left', fontSize: '1.18rem', margin: '1.2rem 0 2.2rem 2.2rem', lineHeight: 1.7}}>
-      <li>Over <b>[insert number]</b> trees planted, offsetting tons of CO₂.</li>
-      <li><b>[Insert number]%</b> reduction in average household emissions among program participants.</li>
+      <li>Over <b>250+</b> trees planted, offsetting tons of CO₂.</li>
+      <li><b>10%</b> reduction in average household emissions among program participants.</li>
       <li>Community-wide adoption of green practices and renewable energy solutions.</li>
     </ul>
     <h3 style={{color: '#ff6600', textAlign: 'left', fontSize: '1.35rem'}}>🌍 Why It Matters:</h3>

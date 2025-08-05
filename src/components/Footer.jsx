@@ -31,7 +31,7 @@ const Footer = () => {
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0 }}
         >
-          <div className="footer__logo">Amay Foundation</div>
+          <div className="footer__logo">AMAY FOUNDATION</div>
           <p style={{textAlign:'justify'}}>Amay Foundation is a youth-led non-profit working to uplift underprivileged communities through education, empowerment, and sustainable efforts. Guided by our Sanskrit motto "शुद्धचेतने सेवा यत्र, तत्र कल्याणम्" — "Where service is done with pure consciousness, there lies true welfare" — we believe in creating positive change with sincerity, compassion, and purpose.</p>
         </motion.div>
         

@@ -84,7 +84,7 @@
 }
 
 .program-card-description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin: 0 0 1.5rem 0;
   flex-grow: 1;
@@ -92,8 +92,8 @@
 }
 
 .program-card-button {
-  background-color: #fff !important;
-  color: rgba(0, 47, 45, 0.978) !important;
+  background-color: #fff ;
+  color: rgba(0, 47, 45, 0.978) ;
   padding: 0.75rem 2rem;
   border-radius: 50px;
   text-decoration: none;
@@ -101,15 +101,15 @@
   transition: background-color 0.3s, color 0.3s, transform 0.2s;
   display: inline-block;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  border: none;
+  border: solid 2px black;
   width: fit-content;
   margin-top: 1rem;
 }
 
 .program-card-button:hover {
-  background: #39b54a;
-  
-  transform: translateY(-4px);
+  background-color:'black';
+  color:'white';
+  transform: translateY(-6px);
 }
 
 /* Outlined button for What We Do page sections */
