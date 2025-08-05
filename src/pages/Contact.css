@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   justify-content: flex-start;
   position: relative;
   font-family: 'Open Sans', sans-serif;
@@ -55,14 +56,15 @@
 .contact-card-container {
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 800px;
+  margin-top:20px;
   padding: 3rem;
   text-align: center;
-  backdrop-filter: blur(10px);
+  
 }
 
 .contact-card-header {
@@ -112,7 +114,7 @@
   font-size: 1.8rem;
   color: #1D2BAA;
   margin-right: 1.5rem;
-  width: 40px; /* To align titles */
+  width: 40px;
   text-align: center;
 }
 
@@ -132,7 +134,7 @@
 
 .contact-detail-link {
   font-size: 1.1rem;
-  color: #1D2BAA;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
   display: block;
@@ -144,6 +146,7 @@
   text-decoration: underline;
 }
 
+/* Social Icons Container */
 .contact-social-links {
   display: flex;
   justify-content: center;
@@ -151,8 +154,8 @@
   margin-top: 2.5rem;
 }
 
+/* Base style for social icons */
 .contact-social-icon {
-  color: #1D2BAA;
   font-size: 1.3rem;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -164,15 +167,22 @@
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #1D2BAA;
 }
 
-.contact-social-icon:hover {
+/* Facebook Hover Effect */
+.contact-social-icon.facebook:hover {
+  background: #3b5998;
   color: #fff;
-  background: #1D2BAA;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(29, 43, 170, 0.3);
 }
 
+/* Instagram Hover Effect */
+.contact-social-icon.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-page-container {
     padding: 1.5rem 1rem;
@@ -205,13 +215,12 @@
     height: 40px;
     font-size: 1.2rem;
   }
- 
-  .contact-detail-link{
+
+  .contact-detail-link {
     margin-left: -30px;
-
   }
-  .contact-details-section{
+
+  .contact-details-section {
     margin-left: -20px;
-
   }
-} 
+}

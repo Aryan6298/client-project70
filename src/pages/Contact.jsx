@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css';
 import backgroundImage from '../assets/images/crousal-img01.webp';
 import { motion } from 'framer-motion';
@@ -70,7 +70,7 @@ const Contact = () => {
             <div>
               <h3 className="contact-detail-title">Phone</h3>
               <a href="tel:+918889583332" className="contact-detail-link">+91 88895-83332</a>
-              <a href="tel:+918982949153" className="contact-detail-link">+91 8982949153</a>
+              <a href="tel:+918982949153" className="contact-detail-link">+91 89829-49153</a>
             </div>
           </motion.div>
         </motion.div>
@@ -83,26 +83,25 @@ const Contact = () => {
           <motion.a 
             href="https://www.facebook.com/profile.php?id=61578311296586" 
             aria-label="Facebook" 
-            className="contact-social-icon"
-            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            className="contact-social-icon facebook"
+            whileHover={{ y: -3 }}
             transition={{ duration: 0.2 }}
           >
             <FontAwesomeIcon icon={faFacebookF} />
           </motion.a>
-           <motion.a 
+          <motion.a 
             href="https://www.instagram.com/amayfoundation?utm_source=qr&igsh=MXZvbjY0ZnF5cGNiMQ==" 
             aria-label="Instagram" 
-            className="contact-social-icon"
-            whileHover={{ y: -3, boxShadow: '0 8px 20px rgba(29,43,170,0.3)' }}
+            className="contact-social-icon instagram"
+            whileHover={{ y: -3 }}
             transition={{ duration: 0.2 }}
           >
             <FontAwesomeIcon icon={faInstagram} />
           </motion.a>
-          
         </motion.div>
       </motion.div>
     </motion.div>
   );
 };
 
-export default Contact; 
+export default Contact;

@@ -179,15 +179,15 @@ footer, .footer {
 
 .counter-label {
   font-size: 1.2rem;
-  color: #fff;
+  color: rgba(0, 47, 45, 0.978);
   font-weight: 600;
   letter-spacing: 1px;
   margin-top: 0.2rem;
 }
 
 .volunteer-cta-section {
-  background: rgba(0, 47, 45, 0.978);
-  color: #fff;
+  background: rgba(245,245,245,1 );
+  color: rgba(0, 47, 45, 0.978);
   text-align: center;
   padding: 3.5rem 0 3.5rem 0;
   margin: 0 0 2rem 0;
@@ -197,7 +197,8 @@ footer, .footer {
   font-weight: 700;
   margin-bottom: 1.2rem;
   letter-spacing: 1px;
-  color: #fff;
+  width: 100%;
+  color:  rgba(1, 82, 78, 0.98);
 }
 .volunteer-cta-desc {
   font-size: 1.25rem;
@@ -215,7 +216,7 @@ footer, .footer {
   text-decoration: none;
   transition: background 0.2s, color 0.2s, transform 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  border: none;
+  border: solid 2px rgba(0, 47, 45, 0.978);
   outline: none;
   cursor: pointer;
 }

@@ -4,7 +4,7 @@
   padding: 1.5rem 0 0.5rem 0;
   font-size: 1rem;
   overflow: hidden;
-  background-image: url('../assets/images/green-world.webp');
+  background-image: url('../assets/images/footer-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -36,14 +36,16 @@
 
 .footer__brand {
   flex: 2 1 340px;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  margin-left:-4rem;
 }
 
 .footer__logo {
   color: #1D2BAA;
-  font-size: 1.5rem;
-  margin-top: 0.2rem;
+  font-size: 1.7rem;
+  margin-top: 0rem;
   font-weight: 800;
+  text-align:center;
   letter-spacing: 1px;
   margin-bottom: 0.2rem;
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
@@ -55,39 +57,13 @@
 }
 
 .footer__col h4 {
-  color: #fff;
+  color:  #1D2BAA ;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border-bottom: 2px solid #39b54a;
   display: inline-block;
   padding-bottom: 0.1rem;
   font-weight: 700;
-}
-
-.footer__col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer__col ul li {
-  margin-bottom: 0.5rem;
-  border-bottom: 1px dotted #444;
-  padding-bottom: 0.3rem;
-}
-
-.footer__col ul li:last-child {
-  border-bottom: none;
-}
-
-.footer__col ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer__col ul li a:hover {
-  color: #39b54a;
 }
 
 .footer__contact p, .footer__address p {
@@ -156,7 +132,6 @@
 }
 
 .footer-social-icon {
-  color: #39b54a;
   font-size: 1.25rem;
   text-decoration: none;
   transition: color 0.2s, background 0.2s, transform 0.2s;
@@ -169,13 +144,34 @@
   background: #fff;
   border: 2px solid #39b54a;
   box-shadow: 0 2px 8px rgba(57,181,74,0.10);
+  color: #39b54a;
 }
 
+/* ✅ Hover with original colors */
 .footer-social-icon:hover {
-  color: #fff;
-  background: #39b54a;
+  background: #fff;
   transform: scale(1.12);
-  border-color: #2e8c3a;
+  border-color: transparent;
+}
+
+.footer-social-icon[href*="facebook"]:hover {
+  color: #1877F2;
+}
+
+.footer-social-icon[href*="instagram"]:hover {
+  color: #E4405F;
+}
+
+.footer-social-icon[href*="twitter"]:hover {
+  color: #1DA1F2;
+}
+
+.footer-social-icon[href*="linkedin"]:hover {
+  color: #0077B5;
+}
+
+.footer-social-icon[href*="youtube"]:hover {
+  color: #FF0000;
 }
 
 .footer__brand p {
@@ -195,6 +191,8 @@
   z-index: 2;
   pointer-events: none;
 }
+
+/* Responsive Styles */
 
 @media (max-width: 900px) {
   .footer__container {

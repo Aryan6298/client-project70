@@ -70,11 +70,11 @@ const Home = () => {
       <HeroSection />
       <div className="home-content-overlay">
         <ProgramHighlight />
-        <div style={{backgroundColor: 'white',top: '100px'}} data-aos="fade-up" data-aos-delay="200">
+        <div style={{ }} data-aos="fade-up" data-aos-delay="200">
           <AboutSection />
         </div>
         {/* Volunteer CTA Section */}
-        <section className="volunteer-cta-section" data-aos="fade-up" data-aos-delay="300">
+        <section className="volunteer-cta-section" style={{marginTop:'30px'}} data-aos="fade-up" data-aos-delay="300">
           <h2 className="volunteer-cta-title">BECOME VOLUNTEER</h2>
           <p className="volunteer-cta-desc">With an approach of giving back to society, our volunteers are helping us from across the world.</p>
           <Link to="/join-us" className="volunteer-cta-button">Join Us</Link>
