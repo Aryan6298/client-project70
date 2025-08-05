@@ -275,11 +275,13 @@
   }
   .footer__brand {
     padding: 0.5rem 1rem;
+    margin-left: 0.1rem;
     margin-bottom: -11rem;
   }
   .footer__logo {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
+    margin-left: 0.3rem;
     color: #1D2BAA;
     background: rgba(255,255,255,0.45);
     padding: 0.4rem 1.2rem 0.4rem 1rem;
