@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      const repo = "/client-project70"; // CHANGE THIS IF NEEDED
+
+      const path = location.pathname.replace(repo, "");
+      const search = location.search;
+      const hash = location.hash;
+
+      sessionStorage.setItem("redirect", path + search + hash);
+      location.replace(repo + "/index.html");
+    </script>
+  </head>
+  <body></body>
+</html>
