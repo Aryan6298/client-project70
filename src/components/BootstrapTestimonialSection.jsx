@@ -74,7 +74,7 @@ const BootstrapTestimonialSection = () => {
         font-size: 22px;
         font-weight: bold;
         color: white;
-        background: linear-gradient(135deg, #39b54a, #39b54a);
+        background: rgba(0, 47, 45, 0.978); 
         box-shadow: 0 8px 24px rgba(255, 102, 0, 0.2);
         position: relative;
         z-index: 1;
