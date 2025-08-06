@@ -8,7 +8,7 @@ const AboutSection = () => {
       {/* WHO WE ARE Section */}
       <section className="about-section about-who" id="about">
         <div className="about-block">
-          <h2 className="about-title">
+          <h2 className="about-title-who">
             WHO <span className="about-title-red">WE ARE ?</span>
           </h2>
           <div className="about-divider">
@@ -16,7 +16,7 @@ const AboutSection = () => {
             <FaCut className="about-icon" />
             <span className="about-line" />
           </div>
-          <p className="about-vision">
+          <p className="about-vision-black">
             Amay Foundation is a non-profit organization with a vision <b>"To inspire and lead communities towards a sustainable and environmentally conscious future"</b>.
           </p>
         </div>
