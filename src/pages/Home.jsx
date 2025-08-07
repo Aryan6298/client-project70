@@ -13,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaChild, FaUniversity, FaUserPlus, FaUsers, FaHandsHelping, FaHandshake, FaRegClock, } from 'react-icons/fa';
 import { FaPhotoVideo } from "react-icons/fa";
+import { Helmet } from 'react-helmet';
 
 const counters = [
   { label: 'Lives Touched', value: '500+', icon: <FaChild size={48} /> },
@@ -66,41 +67,53 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-page-bg">
-      <HeroSection />
-      <div className="home-content-overlay">
-        <ProgramHighlight />
-        <div style={{ }} data-aos="fade-up" data-aos-delay="200">
-          <AboutSection />
-        </div>
-        {/* Volunteer CTA Section */}
-        <section className="volunteer-cta-section" style={{marginTop:'30px'}} data-aos="fade-up" data-aos-delay="300">
-          <h2 className="volunteer-cta-title">BECOME VOLUNTEER</h2>
-          <p className="volunteer-cta-desc">With an approach of giving back to society, our volunteers are helping us from across the world.</p>
-          <Link to="/join-us" className="volunteer-cta-button">Join Us</Link>
-        </section>
-        <section className="counters-section" data-aos="fade-up" data-aos-delay="200">
-          <div className="counters-grid">
-            {counters.map((c, i) => (
-              <div className="counter-card" key={i} data-aos="zoom-in" data-aos-delay={200 + i * 100}>
-                <span className="counter-icon">{c.icon}</span>
-                <div className="counter-value" ref={el => (counterRefs.current[i] = el)}>{c.value}</div>
-                <div className="counter-label">{c.label}</div>
-              </div>
-            ))}
+    <>
+      <Helmet>
+        <title>Amay Foundation | Environmental Conservation & Community Service</title>
+        <meta name="description" content="Amay Foundation is a non-profit organization dedicated to environmental conservation and community service. Explore our programs, gallery, and join us in making a difference." />
+        <meta name="keywords" content="Amay Foundation, Non-profit, Environmental Conservation, Community Service, Ghana, NGO, Programs, Donate, Volunteer" />
+        <meta property="og:title" content="Amay Foundation | Environmental Conservation & Community Service" />
+        <meta property="og:description" content="Amay Foundation is a non-profit organization dedicated to environmental conservation and community service. Explore our programs, gallery, and join us in making a difference." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://amayfoundation.org/" />
+        <meta property="og:image" content="/logo512.png" />
+      </Helmet>
+      <div className="home-page-bg">
+        <HeroSection />
+        <div className="home-content-overlay">
+          <ProgramHighlight />
+          <div style={{ }} data-aos="fade-up" data-aos-delay="200">
+            <AboutSection />
           </div>
-        </section>
-        <div data-aos="fade-up" data-aos-delay="500">
-          <GalleryCarousel />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="600">
-          <BootstrapTestimonialSection />
-        </div>
-        <div className="partners-section" data-aos="fade-up" data-aos-delay="700">
-          <PartnersSection />
+          {/* Volunteer CTA Section */}
+          <section className="volunteer-cta-section" style={{marginTop:'30px'}} data-aos="fade-up" data-aos-delay="300">
+            <h2 className="volunteer-cta-title">BECOME VOLUNTEER</h2>
+            <p className="volunteer-cta-desc">With an approach of giving back to society, our volunteers are helping us from across the world.</p>
+            <Link to="/join-us" className="volunteer-cta-button">Join Us</Link>
+          </section>
+          <section className="counters-section" data-aos="fade-up" data-aos-delay="200">
+            <div className="counters-grid">
+              {counters.map((c, i) => (
+                <div className="counter-card" key={i} data-aos="zoom-in" data-aos-delay={200 + i * 100}>
+                  <span className="counter-icon">{c.icon}</span>
+                  <div className="counter-value" ref={el => (counterRefs.current[i] = el)}>{c.value}</div>
+                  <div className="counter-label">{c.label}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+          <div data-aos="fade-up" data-aos-delay="500">
+            <GalleryCarousel />
+          </div>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <BootstrapTestimonialSection />
+          </div>
+          <div className="partners-section" data-aos="fade-up" data-aos-delay="700">
+            <PartnersSection />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
