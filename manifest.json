@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Amay Foundation",
+  "name": "Amay Foundation - Environmental Conservation & Community Service",
+  "description": "Amay Foundation is a non-profit organization dedicated to environmental conservation and community service.",
   "icons": [
     {
       "src": "favicon.ico",
