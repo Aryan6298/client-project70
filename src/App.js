@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Topbar from './components/Topbar';
@@ -8,20 +8,21 @@ import Loading from './components/Loading';
 import NavigationBarBootstrap from './components/NavigationBarBootstrap.jsx';
 import Copyrights from './pages/Copyright.jsx';
 
-const Home = lazy(() => import('./pages/Home.jsx'));
-const About = lazy(() => import('./pages/About.jsx'));
-const Programs = lazy(() => import('./pages/Programs.jsx'));
-const Gallery = lazy(() => import('./pages/Gallery.jsx'));
-const Contact = lazy(() => import('./pages/Contact.jsx'));
-const OurTeam = lazy(() => import('./pages/OurTeam.jsx'));
-const DonateNow = lazy(() => import('./pages/DonateNow'));
-const JoinUs = lazy(() => import('./pages/JoinUs.jsx'));
-const NotFound = lazy(() => import('./pages/NotFound'));
-// Add lazy imports for new program highlight pages
-const ProgramHighlightCapacity = lazy(() => import('./pages/ProgramHighlightCapacity.jsx'));
-const ProgramHighlightCarbon = lazy(() => import('./pages/ProgramHighlightCarbon.jsx'));
-const ProgramHighlightLivelihood = lazy(() => import('./pages/ProgramHighlightLivelihood.jsx'));
-const FuturePlans = lazy(() => import('./pages/FuturePlans.jsx'));
+// Import components directly for testing
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Programs from './pages/Programs.jsx';
+import Gallery from './pages/Gallery.jsx';
+import Contact from './pages/Contact.jsx';
+import OurTeam from './pages/OurTeam.jsx';
+import DonateNow from './pages/DonateNow.jsx';
+import JoinUs from './pages/JoinUs.jsx';
+import NotFound from './pages/NotFound.jsx';
+import ProgramHighlightCapacity from './pages/ProgramHighlightCapacity.jsx';
+import ProgramHighlightCarbon from './pages/ProgramHighlightCarbon.jsx';
+import ProgramHighlightLivelihood from './pages/ProgramHighlightLivelihood.jsx';
+import FuturePlans from './pages/FuturePlans.jsx';
+import EventBanner from './components/Eventbanner.jsx';
 
 function ScrollToTop() {
   const location = useLocation();
@@ -61,7 +62,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       {loading && (
         <div style={{
           position: 'fixed',
@@ -78,30 +79,29 @@ function App() {
           <Loading style={{ width: 180, height: 180 }} />
         </div>
       )}
+      <EventBanner />
       <Topbar />
       <NavigationBarBootstrap />
       <ScrollToTop />
-      <Suspense fallback={<Loading style={{ width: 120, height: 120 }} />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/capacity" element={<ProgramHighlightCapacity />} />
-          <Route path="/programs/carbon" element={<ProgramHighlightCarbon />} />
-          <Route path="/programs/livelihood" element={<ProgramHighlightLivelihood />} />
-          <Route path="/future-plans" element={<FuturePlans />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/donatenow" element={<DonateNow />} />
-          <Route path="/join-us" element={<JoinUs />} />
-          <Route path="/copyrights" element={<Copyrights />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/programs/capacity" element={<ProgramHighlightCapacity />} />
+        <Route path="/programs/carbon" element={<ProgramHighlightCarbon />} />
+        <Route path="/programs/livelihood" element={<ProgramHighlightLivelihood />} />
+        <Route path="/future-plans" element={<FuturePlans />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/our-team" element={<OurTeam />} />
+        <Route path="/donatenow" element={<DonateNow />} />
+        <Route path="/join-us" element={<JoinUs />} />
+        <Route path="/copyrights" element={<Copyrights />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
       <FloatingWhatsApp />
-    </>
+    </Router>
   );
 }
 

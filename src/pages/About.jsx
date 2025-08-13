@@ -84,12 +84,12 @@ const About = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <img src={founderImg1} alt="Rachna Shukla" loading="lazy" />
+              <img src={founderImg1} alt="Mrs. Rachna Shukla" loading="lazy" />
               <div className="founder-content">
                 <p>
                   "Amay Foundation began with a passion for making a real difference in our environment. We believe that every small action counts, and together, we can create a lasting impact. Thank you to everyone who supports our mission."
                 </p>
-                <p className="founder-name">Rachna Shukla</p>
+                <p className="founder-name">Mrs. Rachna Shukla</p>
               </div>
             </motion.div>
 
@@ -97,12 +97,12 @@ const About = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <img src={founderImg2} alt="Amit Shukla" loading="lazy" />
+              <img src={founderImg2} alt="Mrs. Amit Shukla" loading="lazy" />
               <div className="founder-content">
                 <p>
                   "With growing environmental challenges, it’s essential we act now. At Amay Foundation, we are working toward scalable, community-led solutions to help preserve nature for future generations."
                 </p>
-                <p className="founder-name">Amit Shukla</p>
+                <p className="founder-name" style={{ marginTop: '36px' }}>Dr. Ashok Vishwakarma</p>
               </div>
             </motion.div>
           </div>

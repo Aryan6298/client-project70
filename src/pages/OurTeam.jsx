@@ -75,7 +75,7 @@ const technicalTeamMembers = [
     image: shailendrasonekar,
   },
   {
-    name: 'Ms. Rashmi Navdev',
+    name: 'Ms. Rashmi Namdeo',
     bio: 'Ms. Rashmi ensures our digital platforms are user-friendly, accessible, and visually compelling for maximum impact.',
     image: rashminavdev,
   }
